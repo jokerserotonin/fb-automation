@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-01-17T17:13:11.566Z",
+  "promptType": "celebrity_comparison",
+  "userPrompt": "Compare Rajesh Khanna and Sridevi",
+  "systemPrompt": "You are generating content for Facebook celebrity comparison posts.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\nYou MUST return data for the following metrics (in this exact order):\n1. Age\n2. Total movies\n3. First movie\n4. Net worth\n5. Spouse\n\nRules for values:\n- Use appropriate format for each metric (e.g., age: \"52 years\", height: \"5'9\\\"\", net_worth: \"$300M\")\n- Keep values concise and readable\n- Use \"Not Married\" or \"N/A\" for missing spouse information\n\nCaption rules:\n- Write a HIGH-ENGAGEMENT, \"Viral Gold\" style caption (150-300 words).\n- Use a \"Pick your King/Queen\" or \"Who wins?\" angle to trigger debates.\n- Use plenty of emojis to stop the scroll 🔥👑.\n- Highlight what makes each celebrity unique and compare their achievements.\n- End with a controversial question to trigger comments (e.g., \"Tell us in the comments who you're backing!\").\n- Make it shareable and addictive for social media fans.\n- NO hashtags in caption (hashtags added separately)\n\nImage rules:\n- DO NOT generate images using AI\n- DO NOT provide Wikipedia URLs (they often return 404 errors)\n- DO NOT provide Google search URLs (e.g., google.com/search?q=...)\n- Instead, provide WORKING, VERIFIED image URLs from reliable sources:\n  * Use image hosting sites like: imgur.com, i.imgur.com, cdn.*, static.*\n  * Use sports/news sites that host images directly (e.g., cricbuzz.com, espncricinfo.com)\n  * URLs must end with image extensions: .jpg, .jpeg, .png, .gif, .webp\n  * URLs must be DIRECT links to images (not pages containing images)\n- If you cannot find working image URLs, leave image_url_a and image_url_b EMPTY and provide search queries instead\n- CRITICAL: Both images must be CONSISTENT in style and framing:\n  * Both should be the same type: either BOTH headshots/portraits OR BOTH full-body OR BOTH action shots\n  * Both should be in similar settings (e.g., both on cricket field, both in studio, both in formal attire)\n  * Both should have similar lighting and background style\n  * This ensures a professional, balanced comparison image\n- When creating search queries, specify the image type clearly:\n  * Example: \"Sachin Tendulkar headshot portrait cricket field\" (not just \"Sachin Tendulkar image\")\n  * Example: \"Virat Kohli headshot portrait cricket field\" (same style for consistency)\n  * Use terms like: \"headshot\", \"portrait\", \"professional photo\", \"cricket field\", \"studio photo\", etc.\n- Images should be professional portraits, side-by-side compatible\n- Portrait orientation, clean backgrounds preferred\n- High quality, professional photos\n- ALWAYS provide search queries as backup (image_search_query_a and image_search_query_b)\n\nSTRICT OUTPUT FORMAT (VALID JSON ONLY):\n\n{\n  \"celebrityA\": {\n    \"name\": \"Name in target language\",\n    \"englishName\": \"Full Name STRICTLY in English/Latin script. Critical for image searching.\",\n    \"age\": \"\",\n    \"total_movies\": \"\",\n    \"first_movie\": \"\",\n    \"net_worth\": \"\",\n    \"spouse\": \"\"\n  },\n  \"celebrityB\": {\n    \"name\": \"Name in target language\",\n    \"englishName\": \"Full Name STRICTLY in English/Latin script. Critical for image searching.\",\n    \"age\": \"\",\n    \"total_movies\": \"\",\n    \"first_movie\": \"\",\n    \"net_worth\": \"\",\n    \"spouse\": \"\"\n  },\n  \"metric_labels\": {\n    // Map each metric key to its display label in target language\n    // Example: \"age\": \"Age\" (or \"उम्र\" if Hindi)\n    // Example: \"net_worth\": \"Net Worth\" (or \"संपत्ति\" if Hindi)\n    // Include ALL metrics requested\n  },\n  \"caption\": \"\",\n  \"image_url_a\": \"WORKING direct image URL (must end with .jpg/.png/.jpeg/.webp) OR empty string if not available\",\n  \"image_url_b\": \"WORKING direct image URL (must end with .jpg/.png/.jpeg/.webp) OR empty string if not available\",\n  \"image_search_query_a\": \"Search query for celebrity A (MUST BE IN ENGLISH, e.g., 'Virat Kohli portrait professional HD photo') - REQUIRED\",\n  \"image_search_query_b\": \"Search query for celebrity B (MUST BE IN ENGLISH, e.g., 'MS Dhoni portrait professional HD photo') - REQUIRED\"\n}\n\nCRITICAL: 'image_search_query' MUST ALWAYS BE IN ENGLISH, even if the caption is in Hindi. Do not use Hindi names for search queries.\n\nDo NOT include explanations, markdown, or extra text.\nReturn ONLY valid JSON.",
+  "metrics": [
+    "age",
+    "total_movies",
+    "first_movie",
+    "net_worth",
+    "spouse"
+  ],
+  "gptRequest": {
+    "model": "gpt-4o",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are generating content for Facebook celebrity comparison posts.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\nYou MUST return data for the following metrics (in this exact order):\n1. Age\n2. Total movies\n3. First movie\n4. Net worth\n5. Spouse\n\nRules for values:\n- Use appropriate format for each metric (e.g., age: \"52 years\", height: \"5'9\\\"\", net_worth: \"$300M\")\n- Keep values concise and readable\n- Use \"Not Ma..."
+      },
+      {
+        "role": "user",
+        "content": "Compare Rajesh Khanna and Sridevi"
+      }
+    ],
+    "max_tokens": 800,
+    "temperature": 0.8
+  },
+  "gptResponse": {
+    "content": "{\n  \"celebrityA\": {\n    \"name\": \"राजेश खन्ना\",\n    \"englishName\": \"Rajesh Khanna\",\n    \"age\": \"Passed away at 69 years\",\n    \"total_movies\": \"163\",\n    \"first_movie\": \"Aakhri Khat (1966)\",\n    \"net_worth\": \"$65M\",\n    \"spouse\": \"Dimple Kapadia\"\n  },\n  \"celebrityB\": {\n    \"name\": \"श्रीदेवी\",\n    \"englishName\": \"Sridevi\",\n    \"age\": \"Passed away at 54 years\",\n    \"total_movies\": \"300+\",\n    \"first_movie\": \"Thunaivan (1969)\",\n    \"net_worth\": \"$35M\",\n    \"spouse\": \"Boney Kapoor\"\n  },\n  \"metric_labels\": {\n    \"age\": \"उम्र\",\n    \"total_movies\": \"कुल फ़िल्में\",\n    \"first_movie\": \"पहली फ़िल्म\",\n    \"net_worth\": \"कुल संपत्ति\",\n    \"spouse\": \"जीवनसाथी\"\n  },\n  \"caption\": \"यहां हमारे पास सिनेमा की दुनिया के दो चमकते सितारे हैं - राजेश खन्ना और श्रीदेवी! 🌟❤️ राजेश खन्ना, जिन्हें बॉलीवुड का पहला सुपरस्टार कहा जाता है, ने 163 फिल्मों में अपार सफलता पाई और अपने रोमांटिक अंदाज से दिल जीत लिया। उनके करियर की शुरुआत 'आखिरी खत' से हुई और उन्होंने हमें कई यादगार फिल्में दीं।\\n\\nवहीं दूसरी ओर, श्रीदेवी, जिनकी खूबसूरती और अभिनय कौशल की कोई तुलना नहीं है, ने 300 से अधिक फिल्मों में अपनी छाप छोड़ी। 'थुनैवन' से शुरू होकर, वह एक ऐसी अभिनेत्री बनीं जिसने हर एक भूमिका में जान डाल दी। 💃✨\\n\\nराजेश की चार्मिंग पर्सनालिटी और श्रीदेवी की बेमिसाल अदाकारी के बीच किसे चुनेंगे आप? 🤔\\n\\nतो कौन है आपका पसंदीदा सितारा? ❤️‍🔥 अपनी राय नीचे कमेंट्स में बताएं और शेयर करना न भूलें!\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Rajesh Khanna portrait professional HD photo\",\n  \"image_search_query_b\": \"Sridevi portrait professional HD photo\"\n}",
+    "fullResponse": {
+      "id": "chatcmpl-Cz498EBeSestgomvInoN2nwEMhqTK",
+      "object": "chat.completion",
+      "created": 1768669982,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"celebrityA\": {\n    \"name\": \"राजेश खन्ना\",\n    \"englishName\": \"Rajesh Khanna\",\n    \"age\": \"Passed away at 69 years\",\n    \"total_movies\": \"163\",\n    \"first_movie\": \"Aakhri Khat (1966)\",\n    \"net_worth\": \"$65M\",\n    \"spouse\": \"Dimple Kapadia\"\n  },\n  \"celebrityB\": {\n    \"name\": \"श्रीदेवी\",\n    \"englishName\": \"Sridevi\",\n    \"age\": \"Passed away at 54 years\",\n    \"total_movies\": \"300+\",\n    \"first_movie\": \"Thunaivan (1969)\",\n    \"net_worth\": \"$35M\",\n    \"spouse\": \"Boney Kapoor\"\n  },\n  \"metric_labels\": {\n    \"age\": \"उम्र\",\n    \"total_movies\": \"कुल फ़िल्में\",\n    \"first_movie\": \"पहली फ़िल्म\",\n    \"net_worth\": \"कुल संपत्ति\",\n    \"spouse\": \"जीवनसाथी\"\n  },\n  \"caption\": \"यहां हमारे पास सिनेमा की दुनिया के दो चमकते सितारे हैं - राजेश खन्ना और श्रीदेवी! 🌟❤️ राजेश खन्ना, जिन्हें बॉलीवुड का पहला सुपरस्टार कहा जाता है, ने 163 फिल्मों में अपार सफलता पाई और अपने रोमांटिक अंदाज से दिल जीत लिया। उनके करियर की शुरुआत 'आखिरी खत' से हुई और उन्होंने हमें कई यादगार फिल्में दीं।\\n\\nवहीं दूसरी ओर, श्रीदेवी, जिनकी खूबसूरती और अभिनय कौशल की कोई तुलना नहीं है, ने 300 से अधिक फिल्मों में अपनी छाप छोड़ी। 'थुनैवन' से शुरू होकर, वह एक ऐसी अभिनेत्री बनीं जिसने हर एक भूमिका में जान डाल दी। 💃✨\\n\\nराजेश की चार्मिंग पर्सनालिटी और श्रीदेवी की बेमिसाल अदाकारी के बीच किसे चुनेंगे आप? 🤔\\n\\nतो कौन है आपका पसंदीदा सितारा? ❤️‍🔥 अपनी राय नीचे कमेंट्स में बताएं और शेयर करना न भूलें!\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Rajesh Khanna portrait professional HD photo\",\n  \"image_search_query_b\": \"Sridevi portrait professional HD photo\"\n}",
+            "refusal": null,
+            "annotations": []
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1072,
+        "completion_tokens": 522,
+        "total_tokens": 1594,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "service_tier": "default",
+      "system_fingerprint": "fp_deacdd5f6f"
+    }
+  },
+  "imageUrl": null,
+  "savedImagePath": null
+}

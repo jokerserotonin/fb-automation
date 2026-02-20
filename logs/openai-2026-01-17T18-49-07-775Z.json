@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-01-17T18:49:07.774Z",
+  "promptType": "celebrity_comparison",
+  "userPrompt": "Compare Rajesh Khanna and Deepika Padukone",
+  "systemPrompt": "You are generating content for Facebook celebrity comparison posts, you will have to generate data for image and caption, caption must always be in English. and the image data must always be dependent on the language setting of the user which is determined by the language parameter.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\nCaption rules:\n- Write a HIGH-ENGAGEMENT, \"Viral Gold\" style caption (150-300 words).\n- Use a \"Pick your King/Queen\" or \"Who wins?\" angle to trigger debates.\n- Use plenty of emojis to stop the scroll 🔥👑.\n- Highlight what makes each celebrity unique and compare their achievements.\n- End with a controversial question to trigger comments (e.g., \"Tell us in the comments who you're backing!\").\n- Make it shareable and addictive for social media fans.\n- NO hashtags in caption (hashtags added separately).\n- STRICTLY USE ENGLISH for the caption.\n\n-----------------------------------------------------------\nDUAL AUDIENCE RULES (CRITICAL):\n1. THE GRAPHIC (Hindi): For non-English readers. Use Devanagari for JSON objects.\n2. THE CAPTION (English): For global engagement. Use STRICTLY ENGLISH for the \"caption\" field.\n3. NUMERALS RULE: Use Arabic numerals (0, 1, 2, 3...) for ALL numbers/stats. DO NOT use Devanagari numerals.\n-----------------------------------------------------------\n\nJSON Output Format:\n{\n  \"celebrityA\": {\n    \"name\": \"HINDI_NAME\",\n    \"englishName\": \"ENGLISH_FULL_NAME\",\n    \"age\": \"HINDI_VALUE\",\n    \"total_movies\": \"HINDI_VALUE\",\n    \"first_movie\": \"HINDI_VALUE\",\n    \"net_worth\": \"HINDI_VALUE\",\n    \"spouse\": \"HINDI_VALUE\"\n  },\n  \"celebrityB\": {\n    \"name\": \"HINDI_NAME\",\n    \"englishName\": \"ENGLISH_FULL_NAME\",\n    \"age\": \"HINDI_VALUE\",\n    \"total_movies\": \"HINDI_VALUE\",\n    \"first_movie\": \"HINDI_VALUE\",\n    \"net_worth\": \"HINDI_VALUE\",\n    \"spouse\": \"HINDI_VALUE\"\n  },\n  \"metric_labels\": {\n    \"age\": \"उम्र\",\n    \"total_movies\": \"कुल फिल्में\",\n    \"first_movie\": \"पहली फिल्म\",\n    \"best_movie\": \"बेस्ट फिल्म\",\n    \"net_worth\": \"संपत्ति\",\n    \"famous_for\": \"बेस्ट वर्क\",\n    \"best_work\": \"बेस्ट वर्क\",\n    \"spouse\": \"जीवन साथी\",\n    \"height\": \"ऊंचाई\"\n  },\n  \"caption\": \"STRICT_ENGLISH_VIRAL_CAPTION_ONLY\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Search Query in English\",\n  \"image_search_query_b\": \"Search Query in English\"\n}\n\nDo NOT use Hindi in the \"caption\" field. \nDo NOT include explanations. Return ONLY valid JSON.",
+  "metrics": [
+    "age",
+    "total_movies",
+    "first_movie",
+    "net_worth",
+    "spouse"
+  ],
+  "gptRequest": {
+    "model": "gpt-4o",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are generating content for Facebook celebrity comparison posts, you will have to generate data for image and caption, caption must always be in English. and the image data must always be dependent on the language setting of the user which is determined by the language parameter.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\nCaption rules:\n- Write a HIGH-ENGAGEMENT, \"Viral Gold\" style caption (150-300 words)..."
+      },
+      {
+        "role": "user",
+        "content": "Compare Rajesh Khanna and Deepika Padukone"
+      }
+    ],
+    "max_tokens": 800,
+    "temperature": 0.8
+  },
+  "gptResponse": {
+    "content": "{\n  \"celebrityA\": {\n    \"name\": \"राजेश खन्ना\",\n    \"englishName\": \"Rajesh Khanna\",\n    \"age\": \"७४\",\n    \"total_movies\": \"१६३\",\n    \"first_movie\": \"आखिरी खत\",\n    \"net_worth\": \"६५ मिलियन USD\",\n    \"spouse\": \"डिंपल कपाड़िया\"\n  },\n  \"celebrityB\": {\n    \"name\": \"दीपिका पादुकोण\",\n    \"englishName\": \"Deepika Padukone\",\n    \"age\": \"३७\",\n    \"total_movies\": \"४५\",\n    \"first_movie\": \"ओम शांति ओम\",\n    \"net_worth\": \"४० मिलियन USD\",\n    \"spouse\": \"रणवीर सिंह\"\n  },\n  \"metric_labels\": {\n    \"age\": \"उम्र\",\n    \"total_movies\": \"कुल फिल्में\",\n    \"first_movie\": \"पहली फिल्म\",\n    \"best_movie\": \"बेस्ट फिल्म\",\n    \"net_worth\": \"संपत्ति\",\n    \"famous_for\": \"बेस्ट वर्क\",\n    \"best_work\": \"बेस्ट वर्क\",\n    \"spouse\": \"जीवन साथी\",\n    \"height\": \"ऊंचाई\"\n  },\n  \"caption\": \"🔥 Who rules the Bollywood empire? 🤴👸 Dive into the legacy of Rajesh Khanna, the original superstar who starred in a record-breaking 163 films, capturing hearts since his debut in 'Aakhri Khat'. With a net worth of $65 million, he's the king of classic cinema! Or are you enchanted by Deepika Padukone, the reigning queen of modern Bollywood? With her radiant charm and talent, she's wowed us in 45 films since 'Om Shanti Om' and built a $40 million empire! 🎬💃 Both actors have iconic partners, making their personal lives just as star-studded. But who do you think dominated the silver screen better? 🤔🖤 Comment below with your pick and why! ✨\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Rajesh Khanna\",\n  \"image_search_query_b\": \"Deepika Padukone\"\n}",
+    "fullResponse": {
+      "id": "chatcmpl-Cz5e2iVnW3Pw5lDhRvjhoMSUUWXu4",
+      "object": "chat.completion",
+      "created": 1768675742,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"celebrityA\": {\n    \"name\": \"राजेश खन्ना\",\n    \"englishName\": \"Rajesh Khanna\",\n    \"age\": \"७४\",\n    \"total_movies\": \"१६३\",\n    \"first_movie\": \"आखिरी खत\",\n    \"net_worth\": \"६५ मिलियन USD\",\n    \"spouse\": \"डिंपल कपाड़िया\"\n  },\n  \"celebrityB\": {\n    \"name\": \"दीपिका पादुकोण\",\n    \"englishName\": \"Deepika Padukone\",\n    \"age\": \"३७\",\n    \"total_movies\": \"४५\",\n    \"first_movie\": \"ओम शांति ओम\",\n    \"net_worth\": \"४० मिलियन USD\",\n    \"spouse\": \"रणवीर सिंह\"\n  },\n  \"metric_labels\": {\n    \"age\": \"उम्र\",\n    \"total_movies\": \"कुल फिल्में\",\n    \"first_movie\": \"पहली फिल्म\",\n    \"best_movie\": \"बेस्ट फिल्म\",\n    \"net_worth\": \"संपत्ति\",\n    \"famous_for\": \"बेस्ट वर्क\",\n    \"best_work\": \"बेस्ट वर्क\",\n    \"spouse\": \"जीवन साथी\",\n    \"height\": \"ऊंचाई\"\n  },\n  \"caption\": \"🔥 Who rules the Bollywood empire? 🤴👸 Dive into the legacy of Rajesh Khanna, the original superstar who starred in a record-breaking 163 films, capturing hearts since his debut in 'Aakhri Khat'. With a net worth of $65 million, he's the king of classic cinema! Or are you enchanted by Deepika Padukone, the reigning queen of modern Bollywood? With her radiant charm and talent, she's wowed us in 45 films since 'Om Shanti Om' and built a $40 million empire! 🎬💃 Both actors have iconic partners, making their personal lives just as star-studded. But who do you think dominated the silver screen better? 🤔🖤 Comment below with your pick and why! ✨\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Rajesh Khanna\",\n  \"image_search_query_b\": \"Deepika Padukone\"\n}",
+            "refusal": null,
+            "annotations": []
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 680,
+        "completion_tokens": 484,
+        "total_tokens": 1164,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "service_tier": "default",
+      "system_fingerprint": "fp_deacdd5f6f"
+    }
+  },
+  "imageUrl": null,
+  "savedImagePath": null
+}

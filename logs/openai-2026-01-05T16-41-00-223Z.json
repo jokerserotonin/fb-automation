@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-01-05T16:41:00.214Z",
+  "promptType": "celebrity_comparison",
+  "userPrompt": "Compare two cricketing legends from all across the world, active and inactive player both, pick the two which are worth comparing to each other ",
+  "systemPrompt": "You are generating content for Facebook celebrity comparison posts.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\nIMPORTANT - AVOID REPEATS:\nThe following celebrity pairs have been used recently. DO NOT use these exact same pairs:\n- sir don bradman vs kane williamson\n- brian lara vs joe root\n- sachin tendulkar vs ben stokes\n- ab de villiers vs rohit sharma\n- sir vivian richards vs babar azam\n- ricky ponting vs joe root\n- jacques kallis vs steve smith\n- brian lara vs kane williamson\n- sachin tendulkar vs virat kohli\n\nYou MUST choose DIFFERENT celebrities. If the user prompt is vague (e.g., \"Bollywood celebs\"), pick different celebrities than those listed above.\n\nYou MUST return data for the following metrics (in this exact order):\n1. Age\n2. Height\n3. Centuries\n4. Runs\n5. Catches\n\nRules for values:\n- Use appropriate format for each metric (e.g., age: \"52 years\", height: \"5'9\\\"\", net_worth: \"$300M\")\n- Keep values concise and readable\n- Use \"Not Married\" or \"N/A\" for missing spouse information\n\nCaption rules:\n- Write an engaging, detailed comparison (150-300 words)\n- Highlight what makes each celebrity unique\n- Compare their acting styles, achievements, or characteristics\n- End with a thoughtful conclusion or verdict\n- Make it shareable and engaging for social media\n- NO hashtags in caption (hashtags added separately)\n- IMPORTANT: Write the entire caption in Hindi (Devanagari script). Use natural, conversational Hindi.\n\nImage rules:\n- DO NOT generate images using AI\n- DO NOT provide Wikipedia URLs (they often return 404 errors)\n- DO NOT provide Google search URLs (e.g., google.com/search?q=...)\n- Instead, provide WORKING, VERIFIED image URLs from reliable sources:\n  * Use image hosting sites like: imgur.com, i.imgur.com, cdn.*, static.*\n  * Use sports/news sites that host images directly (e.g., cricbuzz.com, espncricinfo.com)\n  * URLs must end with image extensions: .jpg, .jpeg, .png, .gif, .webp\n  * URLs must be DIRECT links to images (not pages containing images)\n- If you cannot find working image URLs, leave image_url_a and image_url_b EMPTY and provide search queries instead\n- CRITICAL: Both images must be CONSISTENT in style and framing:\n  * Both should be the same type: either BOTH headshots/portraits OR BOTH full-body OR BOTH action shots\n  * Both should be in similar settings (e.g., both on cricket field, both in studio, both in formal attire)\n  * Both should have similar lighting and background style\n  * This ensures a professional, balanced comparison image\n- When creating search queries, specify the image type clearly:\n  * Example: \"Sachin Tendulkar headshot portrait cricket field\" (not just \"Sachin Tendulkar image\")\n  * Example: \"Virat Kohli headshot portrait cricket field\" (same style for consistency)\n  * Use terms like: \"headshot\", \"portrait\", \"professional photo\", \"cricket field\", \"studio photo\", etc.\n- Images should be professional portraits, side-by-side compatible\n- Portrait orientation, clean backgrounds preferred\n- High quality, professional photos\n- ALWAYS provide search queries as backup (image_search_query_a and image_search_query_b)\n\nSTRICT OUTPUT FORMAT (VALID JSON ONLY):\n\n{\n  \"celebrityA\": {\n    \"name\": \"\",\n    \"age\": \"\",\n    \"height\": \"\",\n    \"centuries\": \"\",\n    \"runs\": \"\",\n    \"catches\": \"\"\n  },\n  \"celebrityB\": {\n    \"name\": \"\",\n    \"age\": \"\",\n    \"height\": \"\",\n    \"centuries\": \"\",\n    \"runs\": \"\",\n    \"catches\": \"\"\n  },\n  \"caption\": \"\",\n  \"image_url_a\": \"WORKING direct image URL (must end with .jpg/.png/.jpeg/.webp) OR empty string if not available\",\n  \"image_url_b\": \"WORKING direct image URL (must end with .jpg/.png/.jpeg/.webp) OR empty string if not available\",\n  \"image_search_query_a\": \"Search query for celebrity A (e.g., 'Virat Kohli portrait professional photo') - REQUIRED\",\n  \"image_search_query_b\": \"Search query for celebrity B (e.g., 'MS Dhoni portrait professional photo') - REQUIRED\"\n}\n\nDo NOT include explanations, markdown, or extra text.\nReturn ONLY valid JSON.",
+  "metrics": [
+    "age",
+    "height",
+    "centuries",
+    "runs",
+    "catches"
+  ],
+  "gptRequest": {
+    "model": "gpt-4o",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are generating content for Facebook celebrity comparison posts.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\nIMPORTANT - AVOID REPEATS:\nThe following celebrity pairs have been used recently. DO NOT use these exact same pairs:\n- sir don bradman vs kane williamson\n- brian lara vs joe root\n- sachin tendulkar vs ben stokes\n- ab de villiers vs rohit sharma\n- sir vivian richards vs babar azam\n- ricky ponting vs ..."
+      },
+      {
+        "role": "user",
+        "content": "Compare two cricketing legends from all across the world, active and inactive player both, pick the two which are worth comparing to each other "
+      }
+    ],
+    "max_tokens": 800,
+    "temperature": 0.8
+  },
+  "gptResponse": {
+    "content": "{\n  \"celebrityA\": {\n    \"name\": \"Sunil Gavaskar\",\n    \"age\": \"74 years\",\n    \"height\": \"5'5\\\"\",\n    \"centuries\": \"34\",\n    \"runs\": \"10,122\",\n    \"catches\": \"108\"\n  },\n  \"celebrityB\": {\n    \"name\": \"Kane Williamson\",\n    \"age\": \"33 years\",\n    \"height\": \"5'8\\\"\",\n    \"centuries\": \"28\",\n    \"runs\": \"8,000+\",\n    \"catches\": \"89\"\n  },\n  \"caption\": \"सुनील गावस्कर और केन विलियमसन, दो अद्वितीय क्रिकेट जगत के सितारे, अपने-अपने युग के महान बल्लेबाज हैं। सुनील गावस्कर, जिन्हें 'लिटिल मास्टर' के नाम से भी जाना जाता है, ने भारतीय क्रिकेट को उस ऊँचाई पर पहुँचाया जहाँ से आधुनिक क्रिकेट का विकास हुआ। उनकी तकनीकी उत्कृष्टता और धैर्य ने उन्हें न सिर्फ भारतीय बल्कि विश्व क्रिकेट में भी अद्वितीय स्थान दिलाया। उनके 34 टेस्ट शतक और 10,122 रन इस बात का प्रमाण हैं। \\n\\nवहीं दूसरी ओर, केन विलियमसन ने अपनी क्लासिक और संयमित बल्लेबाजी शैली के कारण क्रिकेट प्रेमियों का दिल जीता है। उनकी कप्तानी के तहत न्यूजीलैंड की टीम ने कई ऐतिहासिक मैच जीतें। वर्तमान में, विलियमसन ने 8,000 से अधिक रन और 28 शतक बनाए हैं। उनकी खेल की समझ और जेंटलमैन अप्रोच उन्हें मौजूदा युग के सबसे पसंदीदा खिलाड़ियों में से एक बनाती है। \\n\\nदोनों ही खिलाड़ी, चाहे वो गावस्कर हों या विलियमसन, न केवल अपने-अपने देश के लिए बल्कि विश्व क्रिकेट के लिए भी प्रेरणास्त्रोत हैं। इनका योगदान आने वाली पीढ़ी के खिलाड़ियों को क्रिकेट में अपना सर्वश्रेष्ठ देने के लिए प्रेरित करता रहेगा।\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Sunil Gavaskar portrait professional photo\",\n  \"image_search_query_b\": \"Kane Williamson portrait professional photo\"\n}",
+    "fullResponse": {
+      "id": "chatcmpl-CuhvMKi3rjOQyel2F3kVPPP24YIlB",
+      "object": "chat.completion",
+      "created": 1767631248,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"celebrityA\": {\n    \"name\": \"Sunil Gavaskar\",\n    \"age\": \"74 years\",\n    \"height\": \"5'5\\\"\",\n    \"centuries\": \"34\",\n    \"runs\": \"10,122\",\n    \"catches\": \"108\"\n  },\n  \"celebrityB\": {\n    \"name\": \"Kane Williamson\",\n    \"age\": \"33 years\",\n    \"height\": \"5'8\\\"\",\n    \"centuries\": \"28\",\n    \"runs\": \"8,000+\",\n    \"catches\": \"89\"\n  },\n  \"caption\": \"सुनील गावस्कर और केन विलियमसन, दो अद्वितीय क्रिकेट जगत के सितारे, अपने-अपने युग के महान बल्लेबाज हैं। सुनील गावस्कर, जिन्हें 'लिटिल मास्टर' के नाम से भी जाना जाता है, ने भारतीय क्रिकेट को उस ऊँचाई पर पहुँचाया जहाँ से आधुनिक क्रिकेट का विकास हुआ। उनकी तकनीकी उत्कृष्टता और धैर्य ने उन्हें न सिर्फ भारतीय बल्कि विश्व क्रिकेट में भी अद्वितीय स्थान दिलाया। उनके 34 टेस्ट शतक और 10,122 रन इस बात का प्रमाण हैं। \\n\\nवहीं दूसरी ओर, केन विलियमसन ने अपनी क्लासिक और संयमित बल्लेबाजी शैली के कारण क्रिकेट प्रेमियों का दिल जीता है। उनकी कप्तानी के तहत न्यूजीलैंड की टीम ने कई ऐतिहासिक मैच जीतें। वर्तमान में, विलियमसन ने 8,000 से अधिक रन और 28 शतक बनाए हैं। उनकी खेल की समझ और जेंटलमैन अप्रोच उन्हें मौजूदा युग के सबसे पसंदीदा खिलाड़ियों में से एक बनाती है। \\n\\nदोनों ही खिलाड़ी, चाहे वो गावस्कर हों या विलियमसन, न केवल अपने-अपने देश के लिए बल्कि विश्व क्रिकेट के लिए भी प्रेरणास्त्रोत हैं। इनका योगदान आने वाली पीढ़ी के खिलाड़ियों को क्रिकेट में अपना सर्वश्रेष्ठ देने के लिए प्रेरित करता रहेगा।\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Sunil Gavaskar portrait professional photo\",\n  \"image_search_query_b\": \"Kane Williamson portrait professional photo\"\n}",
+            "refusal": null,
+            "annotations": []
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1031,
+        "completion_tokens": 475,
+        "total_tokens": 1506,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "service_tier": "default",
+      "system_fingerprint": "fp_deacdd5f6f"
+    }
+  },
+  "imageUrl": null,
+  "savedImagePath": null
+}

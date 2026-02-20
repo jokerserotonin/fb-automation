@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-01-11T16:01:12.659Z",
+  "promptType": "celebrity_comparison",
+  "userPrompt": "Generate a comparison between Yuzi Chahal and Kuldeep Yadav",
+  "systemPrompt": "You are generating content for Facebook celebrity comparison posts.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\nYou MUST return data for the following metrics (in this exact order):\n1. Batting\n2. Matches\n3. Runs\n4. Average\n5. Strike Rate\n\nRules for values:\n- Use appropriate format for each metric (e.g., age: \"52 years\", height: \"5'9\\\"\", net_worth: \"$300M\")\n- Keep values concise and readable\n- Use \"Not Married\" or \"N/A\" for missing spouse information\n\nCaption rules:\n- Write an engaging, detailed comparison (150-300 words)\n- Highlight what makes each celebrity unique\n- Compare their acting styles, achievements, or characteristics\n- End with a thoughtful conclusion or verdict\n- Make it shareable and engaging for social media\n- NO hashtags in caption (hashtags added separately)\n\nImage rules:\n- DO NOT generate images using AI\n- DO NOT provide Wikipedia URLs (they often return 404 errors)\n- DO NOT provide Google search URLs (e.g., google.com/search?q=...)\n- Instead, provide WORKING, VERIFIED image URLs from reliable sources:\n  * Use image hosting sites like: imgur.com, i.imgur.com, cdn.*, static.*\n  * Use sports/news sites that host images directly (e.g., cricbuzz.com, espncricinfo.com)\n  * URLs must end with image extensions: .jpg, .jpeg, .png, .gif, .webp\n  * URLs must be DIRECT links to images (not pages containing images)\n- If you cannot find working image URLs, leave image_url_a and image_url_b EMPTY and provide search queries instead\n- CRITICAL: Both images must be CONSISTENT in style and framing:\n  * Both should be the same type: either BOTH headshots/portraits OR BOTH full-body OR BOTH action shots\n  * Both should be in similar settings (e.g., both on cricket field, both in studio, both in formal attire)\n  * Both should have similar lighting and background style\n  * This ensures a professional, balanced comparison image\n- When creating search queries, specify the image type clearly:\n  * Example: \"Sachin Tendulkar headshot portrait cricket field\" (not just \"Sachin Tendulkar image\")\n  * Example: \"Virat Kohli headshot portrait cricket field\" (same style for consistency)\n  * Use terms like: \"headshot\", \"portrait\", \"professional photo\", \"cricket field\", \"studio photo\", etc.\n- Images should be professional portraits, side-by-side compatible\n- Portrait orientation, clean backgrounds preferred\n- High quality, professional photos\n- ALWAYS provide search queries as backup (image_search_query_a and image_search_query_b)\n\nSTRICT OUTPUT FORMAT (VALID JSON ONLY):\n\n{\n  \"celebrityA\": {\n    \"name\": \"Name in target language\",\n    \"english_name\": \"Name STRICTLY in English/Latin script. DO NOT use Devanagari here.\",\n    \"Batting\": \"\",\n    \"Matches\": \"\",\n    \"Runs\": \"\",\n    \"Average\": \"\",\n    \"Strike Rate\": \"\"\n  },\n  \"celebrityB\": {\n    \"name\": \"Name in target language\",\n    \"english_name\": \"Name STRICTLY in English/Latin script. DO NOT use Devanagari here.\",\n    \"Batting\": \"\",\n    \"Matches\": \"\",\n    \"Runs\": \"\",\n    \"Average\": \"\",\n    \"Strike Rate\": \"\"\n  },\n  \"metric_labels\": {\n    // Map each metric key to its display label in target language\n    // Example: \"age\": \"Age\" (or \"उम्र\" if Hindi)\n    // Example: \"net_worth\": \"Net Worth\" (or \"संपत्ति\" if Hindi)\n    // Include ALL metrics requested\n  },\n  \"caption\": \"\",\n  \"image_url_a\": \"WORKING direct image URL (must end with .jpg/.png/.jpeg/.webp) OR empty string if not available\",\n  \"image_url_b\": \"WORKING direct image URL (must end with .jpg/.png/.jpeg/.webp) OR empty string if not available\",\n  \"image_search_query_a\": \"Search query for celebrity A (MUST BE IN ENGLISH, e.g., 'Virat Kohli portrait professional HD photo') - REQUIRED\",\n  \"image_search_query_b\": \"Search query for celebrity B (MUST BE IN ENGLISH, e.g., 'MS Dhoni portrait professional HD photo') - REQUIRED\"\n}\n\nCRITICAL: 'image_search_query' MUST ALWAYS BE IN ENGLISH, even if the caption is in Hindi. Do not use Hindi names for search queries.\n\nDo NOT include explanations, markdown, or extra text.\nReturn ONLY valid JSON.",
+  "metrics": [
+    "Batting",
+    "Matches",
+    "Runs",
+    "Average",
+    "Strike Rate"
+  ],
+  "gptRequest": {
+    "model": "gpt-4o",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are generating content for Facebook celebrity comparison posts.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\nYou MUST return data for the following metrics (in this exact order):\n1. Batting\n2. Matches\n3. Runs\n4. Average\n5. Strike Rate\n\nRules for values:\n- Use appropriate format for each metric (e.g., age: \"52 years\", height: \"5'9\\\"\", net_worth: \"$300M\")\n- Keep values concise and readable\n- Use \"Not Married..."
+      },
+      {
+        "role": "user",
+        "content": "Generate a comparison between Yuzi Chahal and Kuldeep Yadav"
+      }
+    ],
+    "max_tokens": 800,
+    "temperature": 0.8
+  },
+  "gptResponse": {
+    "content": "{\n  \"celebrityA\": {\n    \"name\": \"युज़ी चहल\",\n    \"english_name\": \"Yuzi Chahal\",\n    \"Batting\": \"Right-handed\",\n    \"Matches\": \"75\",\n    \"Runs\": \"45\",\n    \"Average\": \"10.5\",\n    \"Strike Rate\": \"60\"\n  },\n  \"celebrityB\": {\n    \"name\": \"कुलदीप यादव\",\n    \"english_name\": \"Kuldeep Yadav\",\n    \"Batting\": \"Left-handed\",\n    \"Matches\": \"80\",\n    \"Runs\": \"105\",\n    \"Average\": \"15.0\",\n    \"Strike Rate\": \"70\"\n  },\n  \"metric_labels\": {\n    \"Batting\": \"बैटिंग\",\n    \"Matches\": \"मैच\",\n    \"Runs\": \"रन\",\n    \"Average\": \"औसत\",\n    \"Strike Rate\": \"स्ट्राइक रेट\"\n  },\n  \"caption\": \"युज़ी चहल और कुलदीप यादव भारतीय क्रिकेट के दो प्रमुख स्पिन गेंदबाज हैं, जिन्होंने अपनी अनोखी गेंदबाजी शैली से अंतरराष्ट्रीय मंच पर खास पहचान बनाई है। युज़ी चहल, दाएं हाथ के लेग स्पिनर, ने अपनी तेज तर्रार गेंदबाजी से विरोधी बल्लेबाजों को चकमा दिया है। दूसरी ओर, कुलदीप यादव, बाएं हाथ के चाइनामैन गेंदबाज, अपने फ्लाइट और विविधता से बल्लेबाजों को परेशान करने में माहिर हैं।\\n\\nचहल की बल्लेबाजी में योगदान भले ही न्यूनतम हो, लेकिन उनकी गेंदबाजी में विकेट लेना ही उनकी खासियत है। वहीं, कुलदीप ने बल्लेबाजी में भी कुछ योगदान दिया है, उनकी औसत और स्ट्राइक रेट चहल से बेहतर है। कुलदीप की गेंदबाजी में विविधता और चहल की सटीकता भारतीय टीम के लिए बेहद मूल्यवान रही है।\\n\\nजब बात टीम की आती है, दोनों के पास अपनी-अपनी विशेषताएं हैं जो टीम के संतुलन को बनाए रखने में मदद करती हैं। चहल की चपलता और कुलदीप की रणनीतिक गेंदबाजी ने कई मौकों पर भारत को जीत दिलाई है। कौन बेहतर है, यह व्यक्तिगत पसंद पर निर्भर करता है, लेकिन दोनों ही खिलाड़ी अपने-अपने अंदाज में बेजोड़ हैं।\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Yuzi Chahal portrait professional HD photo\",\n  \"image_search_query_b\": \"Kuldeep Yadav portrait professional HD photo\"\n}",
+    "fullResponse": {
+      "id": "chatcmpl-CwsAA4PoPPfD2vPB0LyOUBMS46AlM",
+      "object": "chat.completion",
+      "created": 1768147262,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"celebrityA\": {\n    \"name\": \"युज़ी चहल\",\n    \"english_name\": \"Yuzi Chahal\",\n    \"Batting\": \"Right-handed\",\n    \"Matches\": \"75\",\n    \"Runs\": \"45\",\n    \"Average\": \"10.5\",\n    \"Strike Rate\": \"60\"\n  },\n  \"celebrityB\": {\n    \"name\": \"कुलदीप यादव\",\n    \"english_name\": \"Kuldeep Yadav\",\n    \"Batting\": \"Left-handed\",\n    \"Matches\": \"80\",\n    \"Runs\": \"105\",\n    \"Average\": \"15.0\",\n    \"Strike Rate\": \"70\"\n  },\n  \"metric_labels\": {\n    \"Batting\": \"बैटिंग\",\n    \"Matches\": \"मैच\",\n    \"Runs\": \"रन\",\n    \"Average\": \"औसत\",\n    \"Strike Rate\": \"स्ट्राइक रेट\"\n  },\n  \"caption\": \"युज़ी चहल और कुलदीप यादव भारतीय क्रिकेट के दो प्रमुख स्पिन गेंदबाज हैं, जिन्होंने अपनी अनोखी गेंदबाजी शैली से अंतरराष्ट्रीय मंच पर खास पहचान बनाई है। युज़ी चहल, दाएं हाथ के लेग स्पिनर, ने अपनी तेज तर्रार गेंदबाजी से विरोधी बल्लेबाजों को चकमा दिया है। दूसरी ओर, कुलदीप यादव, बाएं हाथ के चाइनामैन गेंदबाज, अपने फ्लाइट और विविधता से बल्लेबाजों को परेशान करने में माहिर हैं।\\n\\nचहल की बल्लेबाजी में योगदान भले ही न्यूनतम हो, लेकिन उनकी गेंदबाजी में विकेट लेना ही उनकी खासियत है। वहीं, कुलदीप ने बल्लेबाजी में भी कुछ योगदान दिया है, उनकी औसत और स्ट्राइक रेट चहल से बेहतर है। कुलदीप की गेंदबाजी में विविधता और चहल की सटीकता भारतीय टीम के लिए बेहद मूल्यवान रही है।\\n\\nजब बात टीम की आती है, दोनों के पास अपनी-अपनी विशेषताएं हैं जो टीम के संतुलन को बनाए रखने में मदद करती हैं। चहल की चपलता और कुलदीप की रणनीतिक गेंदबाजी ने कई मौकों पर भारत को जीत दिलाई है। कौन बेहतर है, यह व्यक्तिगत पसंद पर निर्भर करता है, लेकिन दोनों ही खिलाड़ी अपने-अपने अंदाज में बेजोड़ हैं।\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Yuzi Chahal portrait professional HD photo\",\n  \"image_search_query_b\": \"Kuldeep Yadav portrait professional HD photo\"\n}",
+            "refusal": null,
+            "annotations": []
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1023,
+        "completion_tokens": 557,
+        "total_tokens": 1580,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "service_tier": "default",
+      "system_fingerprint": "fp_deacdd5f6f"
+    }
+  },
+  "imageUrl": null,
+  "savedImagePath": null
+}

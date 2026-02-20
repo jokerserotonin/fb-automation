@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-01-06T17:39:06.202Z",
+  "promptType": "general",
+  "userPrompt": "Compare two popular Bollywood actors known for action movies, can be anyone from 70s till 2026, dont have to specifically famous, choose random ",
+  "systemPrompt": "You are a social media content creator. Generate engaging, viral-worthy captions for Facebook posts. Keep it fun, engaging, and appropriate for the content.",
+  "gptRequest": {
+    "model": "gpt-4o",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a social media content creator. Generate engaging, viral-worthy captions for Facebook posts. Keep it fun, engaging, and appropriate for the content."
+      },
+      {
+        "role": "user",
+        "content": "Based on this prompt: \"Compare two popular Bollywood actors known for action movies, can be anyone from 70s till 2026, dont have to specifically famous, choose random \", generate a Facebook post caption. Make it engaging and viral-worthy."
+      }
+    ],
+    "max_tokens": 200,
+    "temperature": 0.8
+  },
+  "gptResponse": {
+    "content": "🎬🔥 Bollywood Showdown: The Ultimate Action Hero Face-Off! 🔥🎬\n\nIn one corner, we have the legendary stunts of 70s icon Dharmendra, known for his raw power and iconic moves. 💪🎥 In the other corner, it's the high-flying, adrenaline-pumping Hrithik Roshan, the modern-day action maestro with killer dance moves and jaw-dropping fight scenes. 🕺💥\n\nWho's your ultimate action hero? The He-Man of Bollywood or the Greek God? Drop your favorite moments, epic scenes, and let's settle this epic showdown once and for all! 👊🎉\n\n#ActionHeroes #BollywoodBattle #DharmendraVsHrithik #AdrenalineRush",
+    "fullResponse": {
+      "id": "chatcmpl-Cv5JG6DtvfO7BzZoyN5yau7mqkELz",
+      "object": "chat.completion",
+      "created": 1767721142,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "🎬🔥 Bollywood Showdown: The Ultimate Action Hero Face-Off! 🔥🎬\n\nIn one corner, we have the legendary stunts of 70s icon Dharmendra, known for his raw power and iconic moves. 💪🎥 In the other corner, it's the high-flying, adrenaline-pumping Hrithik Roshan, the modern-day action maestro with killer dance moves and jaw-dropping fight scenes. 🕺💥\n\nWho's your ultimate action hero? The He-Man of Bollywood or the Greek God? Drop your favorite moments, epic scenes, and let's settle this epic showdown once and for all! 👊🎉\n\n#ActionHeroes #BollywoodBattle #DharmendraVsHrithik #AdrenalineRush",
+            "refusal": null,
+            "annotations": []
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 153,
+        "total_tokens": 244,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "service_tier": "default",
+      "system_fingerprint": "fp_deacdd5f6f"
+    }
+  },
+  "imagePrompt": "Compare two popular Bollywood actors known for action movies, can be anyone from 70s till 2026, dont have to specifically famous, choose random ",
+  "imageUrl": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Bq7dPgyyPz4wrsd4U3JLusT2/user-LQJMRRWNxga22vmSJ2GhIIwh/img-rBuTvEdZ87rHHWVcxUQbZySj.png?st=2026-01-06T16%3A39%3A01Z&se=2026-01-06T18%3A39%3A01Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=f1dafa11-a0c2-4092-91d4-10981fbda051&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-06T13%3A37%3A19Z&ske=2026-01-07T13%3A37%3A19Z&sks=b&skv=2024-08-04&sig=jZXJd/ezfUFrI1ARvakScXPj81kRgZb8TNVvUrNLrdg%3D",
+  "savedImagePath": "/Users/navdeepkk/Desktop/Autopost/logs/images/image-2026-01-06T17-39-06-204Z.png",
+  "imageFilename": "image-2026-01-06T17-39-06-204Z.png"
+}

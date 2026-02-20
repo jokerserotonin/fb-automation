@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-01-13T07:22:21.797Z",
+  "promptType": "general",
+  "userPrompt": "Create a viral comparison post for the two given cricketers. Highlight their most impressive stats and career highlights. Write a captivating caption that will engage cricket fans and spark discussion.",
+  "systemPrompt": "You are a social media content creator. Generate engaging, viral-worthy captions for Facebook posts. Keep it fun, engaging, and appropriate for the content.",
+  "gptRequest": {
+    "model": "gpt-4o",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a social media content creator. Generate engaging, viral-worthy captions for Facebook posts. Keep it fun, engaging, and appropriate for the content."
+      },
+      {
+        "role": "user",
+        "content": "Based on this prompt: \"Create a viral comparison post for the two given cricketers. Highlight their most impressive stats and career highlights. Write a captivating caption that will engage cricket fans and spark discussion.\", generate a Facebook post caption. Make it engaging and viral-worthy."
+      }
+    ],
+    "max_tokens": 200,
+    "temperature": 0.8
+  },
+  "gptResponse": {
+    "content": "🏏 **Cricket Showdown: Legends in the Spotlight! 🌟**\n\nWho would you place your bets on—King Kohli or Master Blaster Tendulkar? 🤔\n\n🔥 Virat Kohli: With 70+ international centuries and a swagger that redefines the game, Kohli's chase maestro antics leave fans in awe. A modern-day great or a record-breaking phenom? 💥\n\n🌟 Sachin Tendulkar: The man with a billion dreams, 100 international centuries, and an unmatched legacy that still resonates through every innings played today. 🤩\n\nTwo legends, bound by their passion but separated by eras. 🏆 Who takes the crown in your book? Cast your vote and let the debate BEGIN! 👇💬 #CricketLegends #TeamKohli #TeamTendulkar #CricketFever",
+    "fullResponse": {
+      "id": "chatcmpl-CxT1FK6BwS4PBw1OhY45b7aqRZcTr",
+      "object": "chat.completion",
+      "created": 1768288937,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "🏏 **Cricket Showdown: Legends in the Spotlight! 🌟**\n\nWho would you place your bets on—King Kohli or Master Blaster Tendulkar? 🤔\n\n🔥 Virat Kohli: With 70+ international centuries and a swagger that redefines the game, Kohli's chase maestro antics leave fans in awe. A modern-day great or a record-breaking phenom? 💥\n\n🌟 Sachin Tendulkar: The man with a billion dreams, 100 international centuries, and an unmatched legacy that still resonates through every innings played today. 🤩\n\nTwo legends, bound by their passion but separated by eras. 🏆 Who takes the crown in your book? Cast your vote and let the debate BEGIN! 👇💬 #CricketLegends #TeamKohli #TeamTendulkar #CricketFever",
+            "refusal": null,
+            "annotations": []
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 95,
+        "completion_tokens": 177,
+        "total_tokens": 272,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "service_tier": "default",
+      "system_fingerprint": "fp_deacdd5f6f"
+    }
+  },
+  "imagePrompt": "Create a viral comparison post for the two given cricketers. Highlight their most impressive stats and career highlights. Write a captivating caption that will engage cricket fans and spark discussion.",
+  "imageUrl": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Bq7dPgyyPz4wrsd4U3JLusT2/user-LQJMRRWNxga22vmSJ2GhIIwh/img-MZUPcjXly6GP4vTWczRejWpk.png?st=2026-01-13T06%3A22%3A16Z&se=2026-01-13T08%3A22%3A16Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=9346e9b9-5d29-4d37-a0a9-c6f95f09f79d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-13T07%3A12%3A50Z&ske=2026-01-14T07%3A12%3A50Z&sks=b&skv=2024-08-04&sig=qzXFcgaHX1eTP7DuVeocHSLnDkQh2nt2Cehx1RW13PQ%3D",
+  "savedImagePath": "/Users/navdeepkk/Desktop/Autopost/logs/images/image-2026-01-13T07-22-21-797Z.png",
+  "imageFilename": "image-2026-01-13T07-22-21-797Z.png"
+}

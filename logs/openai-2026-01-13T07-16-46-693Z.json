@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-01-13T07:16:18.555Z",
+  "promptType": "general",
+  "userPrompt": "Create a viral comparison post for the two given cricketers. Highlight their most impressive stats and career highlights. Write a captivating caption that will engage cricket fans and spark discussion.",
+  "systemPrompt": "You are a social media content creator. Generate engaging, viral-worthy captions for Facebook posts. Keep it fun, engaging, and appropriate for the content.",
+  "gptRequest": {
+    "model": "gpt-4o",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a social media content creator. Generate engaging, viral-worthy captions for Facebook posts. Keep it fun, engaging, and appropriate for the content."
+      },
+      {
+        "role": "user",
+        "content": "Based on this prompt: \"Create a viral comparison post for the two given cricketers. Highlight their most impressive stats and career highlights. Write a captivating caption that will engage cricket fans and spark discussion.\", generate a Facebook post caption. Make it engaging and viral-worthy."
+      }
+    ],
+    "max_tokens": 200,
+    "temperature": 0.8
+  },
+  "gptResponse": {
+    "content": "🌟 Cricket Clash of the Titans! 🏏🔥\n\nWho reigns supreme on the pitch? 🏆 It's time for the ultimate showdown between [Cricketer A] and [Cricketer B]!\n\n🚀 [Cricketer A]'s jaw-dropping [number of runs/wickets] and unforgettable [specific performance/stat] 💥\n\n🔥 [Cricketer B]'s legendary [number of centuries/partnerships] and iconic [specific performance/stat] 🌪️\n\nBoth legends, both incredible, but who steals YOUR heart? 💚💙\n\nComment with your favorite and why! Let the debate begin! 🎤💬 #CricketShowdown #LegendVsLegend #CricketFever\n\n⬇️ Drop your thoughts below! ⬇️",
+    "fullResponse": {
+      "id": "chatcmpl-CxSvOXYtpDD8RQJPjPLanTSBCJp2E",
+      "object": "chat.completion",
+      "created": 1768288574,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "🌟 Cricket Clash of the Titans! 🏏🔥\n\nWho reigns supreme on the pitch? 🏆 It's time for the ultimate showdown between [Cricketer A] and [Cricketer B]!\n\n🚀 [Cricketer A]'s jaw-dropping [number of runs/wickets] and unforgettable [specific performance/stat] 💥\n\n🔥 [Cricketer B]'s legendary [number of centuries/partnerships] and iconic [specific performance/stat] 🌪️\n\nBoth legends, both incredible, but who steals YOUR heart? 💚💙\n\nComment with your favorite and why! Let the debate begin! 🎤💬 #CricketShowdown #LegendVsLegend #CricketFever\n\n⬇️ Drop your thoughts below! ⬇️",
+            "refusal": null,
+            "annotations": []
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 95,
+        "completion_tokens": 163,
+        "total_tokens": 258,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "service_tier": "default",
+      "system_fingerprint": "fp_deacdd5f6f"
+    }
+  },
+  "imagePrompt": "Create a viral comparison post for the two given cricketers. Highlight their most impressive stats and career highlights. Write a captivating caption that will engage cricket fans and spark discussion.",
+  "imageUrl": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-Bq7dPgyyPz4wrsd4U3JLusT2/user-LQJMRRWNxga22vmSJ2GhIIwh/img-g303PGXnzoisPs1fvnY2JbAt.png?st=2026-01-13T06%3A16%3A13Z&se=2026-01-13T08%3A16%3A13Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=7daae675-7b42-4e2e-ab4c-8d8419a28d99&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-01-13T06%3A24%3A29Z&ske=2026-01-14T06%3A24%3A29Z&sks=b&skv=2024-08-04&sig=quckwuVfwN8GxlEEPn3N/Iz%2BipehEs5oQxgP4AO8zDM%3D",
+  "savedImagePath": "/Users/navdeepkk/Desktop/Autopost/logs/images/image-2026-01-13T07-16-18-556Z.png",
+  "imageFilename": "image-2026-01-13T07-16-18-556Z.png"
+}

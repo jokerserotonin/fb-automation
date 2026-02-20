@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-01-11T14:58:17.038Z",
+  "promptType": "celebrity_comparison",
+  "userPrompt": "Generate a comparison between Sanju Samson and Suryakumar Yadav ",
+  "systemPrompt": "You are generating content for Facebook celebrity comparison posts.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\nYou MUST return data for the following metrics (in this exact order):\n1. Batting\n2. Matches\n3. Runs\n4. Average\n5. Strike Rate\n\nRules for values:\n- Use appropriate format for each metric (e.g., age: \"52 years\", height: \"5'9\\\"\", net_worth: \"$300M\")\n- Keep values concise and readable\n- Use \"Not Married\" or \"N/A\" for missing spouse information\n\nCaption rules:\n- Write an engaging, detailed comparison (150-300 words)\n- Highlight what makes each celebrity unique\n- Compare their acting styles, achievements, or characteristics\n- End with a thoughtful conclusion or verdict\n- Make it shareable and engaging for social media\n- NO hashtags in caption (hashtags added separately)\n\nImage rules:\n- DO NOT generate images using AI\n- DO NOT provide Wikipedia URLs (they often return 404 errors)\n- DO NOT provide Google search URLs (e.g., google.com/search?q=...)\n- Instead, provide WORKING, VERIFIED image URLs from reliable sources:\n  * Use image hosting sites like: imgur.com, i.imgur.com, cdn.*, static.*\n  * Use sports/news sites that host images directly (e.g., cricbuzz.com, espncricinfo.com)\n  * URLs must end with image extensions: .jpg, .jpeg, .png, .gif, .webp\n  * URLs must be DIRECT links to images (not pages containing images)\n- If you cannot find working image URLs, leave image_url_a and image_url_b EMPTY and provide search queries instead\n- CRITICAL: Both images must be CONSISTENT in style and framing:\n  * Both should be the same type: either BOTH headshots/portraits OR BOTH full-body OR BOTH action shots\n  * Both should be in similar settings (e.g., both on cricket field, both in studio, both in formal attire)\n  * Both should have similar lighting and background style\n  * This ensures a professional, balanced comparison image\n- When creating search queries, specify the image type clearly:\n  * Example: \"Sachin Tendulkar headshot portrait cricket field\" (not just \"Sachin Tendulkar image\")\n  * Example: \"Virat Kohli headshot portrait cricket field\" (same style for consistency)\n  * Use terms like: \"headshot\", \"portrait\", \"professional photo\", \"cricket field\", \"studio photo\", etc.\n- Images should be professional portraits, side-by-side compatible\n- Portrait orientation, clean backgrounds preferred\n- High quality, professional photos\n- ALWAYS provide search queries as backup (image_search_query_a and image_search_query_b)\n\nSTRICT OUTPUT FORMAT (VALID JSON ONLY):\n\n{\n  \"celebrityA\": {\n    \"name\": \"Name in target language\",\n    \"english_name\": \"Name STRICTLY in English/Latin script. DO NOT use Devanagari here.\",\n    \"Batting\": \"\",\n    \"Matches\": \"\",\n    \"Runs\": \"\",\n    \"Average\": \"\",\n    \"Strike Rate\": \"\"\n  },\n  \"celebrityB\": {\n    \"name\": \"Name in target language\",\n    \"english_name\": \"Name STRICTLY in English/Latin script. DO NOT use Devanagari here.\",\n    \"Batting\": \"\",\n    \"Matches\": \"\",\n    \"Runs\": \"\",\n    \"Average\": \"\",\n    \"Strike Rate\": \"\"\n  },\n  \"metric_labels\": {\n    // Map each metric key to its display label in target language\n    // Example: \"age\": \"Age\" (or \"उम्र\" if Hindi)\n    // Example: \"net_worth\": \"Net Worth\" (or \"संपत्ति\" if Hindi)\n    // Include ALL metrics requested\n  },\n  \"caption\": \"\",\n  \"image_url_a\": \"WORKING direct image URL (must end with .jpg/.png/.jpeg/.webp) OR empty string if not available\",\n  \"image_url_b\": \"WORKING direct image URL (must end with .jpg/.png/.jpeg/.webp) OR empty string if not available\",\n  \"image_search_query_a\": \"Search query for celebrity A (MUST BE IN ENGLISH, e.g., 'Virat Kohli portrait professional HD photo') - REQUIRED\",\n  \"image_search_query_b\": \"Search query for celebrity B (MUST BE IN ENGLISH, e.g., 'MS Dhoni portrait professional HD photo') - REQUIRED\"\n}\n\nCRITICAL: 'image_search_query' MUST ALWAYS BE IN ENGLISH, even if the caption is in Hindi. Do not use Hindi names for search queries.\n\nDo NOT include explanations, markdown, or extra text.\nReturn ONLY valid JSON.",
+  "metrics": [
+    "Batting",
+    "Matches",
+    "Runs",
+    "Average",
+    "Strike Rate"
+  ],
+  "gptRequest": {
+    "model": "gpt-4o",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are generating content for Facebook celebrity comparison posts.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\nYou MUST return data for the following metrics (in this exact order):\n1. Batting\n2. Matches\n3. Runs\n4. Average\n5. Strike Rate\n\nRules for values:\n- Use appropriate format for each metric (e.g., age: \"52 years\", height: \"5'9\\\"\", net_worth: \"$300M\")\n- Keep values concise and readable\n- Use \"Not Married..."
+      },
+      {
+        "role": "user",
+        "content": "Generate a comparison between Sanju Samson and Suryakumar Yadav "
+      }
+    ],
+    "max_tokens": 800,
+    "temperature": 0.8
+  },
+  "gptResponse": {
+    "content": "{\n  \"celebrityA\": {\n    \"name\": \"संजू सैमसन\",\n    \"english_name\": \"Sanju Samson\",\n    \"Batting\": \"Right-hand bat\",\n    \"Matches\": \"150\",\n    \"Runs\": \"3520\",\n    \"Average\": \"30.5\",\n    \"Strike Rate\": \"134.2\"\n  },\n  \"celebrityB\": {\n    \"name\": \"सूर्यकुमार यादव\",\n    \"english_name\": \"Suryakumar Yadav\",\n    \"Batting\": \"Right-hand bat\",\n    \"Matches\": \"120\",\n    \"Runs\": \"3100\",\n    \"Average\": \"34.2\",\n    \"Strike Rate\": \"142.7\"\n  },\n  \"metric_labels\": {\n    \"Batting\": \"बैटिंग\",\n    \"Matches\": \"मैच\",\n    \"Runs\": \"रन\",\n    \"Average\": \"औसत\",\n    \"Strike Rate\": \"स्ट्राइक रेट\"\n  },\n  \"caption\": \"आज की तुलना में हम दो आधुनिक भारतीय क्रिकेट सितारों पर ध्यान केंद्रित कर रहे हैं: संजू सैमसन और सूर्यकुमार यादव। दोनों खिलाड़ी अपनी-अपनी शैली में खास हैं और भारतीय क्रिकेट टीम के लिए अहम योगदान देते हैं।\\n\\nसंजू सैमसन एक प्रतिभाशाली बल्लेबाज हैं, जो अपनी आक्रामक शैली और तेज स्ट्राइक रेट के लिए जाने जाते हैं। उन्होंने 150 मैचों में 3520 रन बनाए हैं, जिसमें उनका औसत 30.5 है। उनकी क्षमता उन्हें टीम के लिए एक महत्वपूर्ण खिलाड़ी बनाती है, खासकर जब टीम को बड़े स्कोर की आवश्यकता होती है।\\n\\nवहीं, सूर्यकुमार यादव क्रिकेट की नई सनसनी हैं। अपनी बेहतरीन बल्लेबाजी तकनीक और शांत दिमाग के साथ, वह अपने खेल को एक अलग स्तर पर ले जाते हैं। 120 मैचों में यादव ने 3100 रन बनाए हैं, जिसमें उनका औसत 34.2 है और स्ट्राइक रेट 142.7। उनकी खेल-शैली में कुछ खास बात यह है कि वह दबाव में भी बेहतरीन प्रदर्शन करते हैं।\\n\\nकुल मिलाकर, जहां संजू सैमसन अपनी आक्रामकता के लिए जाने जाते हैं, वहीं सूर्यकुमार यादव अपनी स्थिरता और तकनीकी कौशल के लिए सराहे जाते हैं। दोनों ही खिलाड़ियों ने अपने-अपने अंदाज में क्रिकेट प्रेमियों का दिल जीता है।\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Sanju Samson portrait professional HD photo\",\n  \"image_search_query_b\": \"Suryakumar Yadav portrait professional HD photo\"\n}",
+    "fullResponse": {
+      "id": "chatcmpl-CwrBLx6Y919Vh12xJThxNFalrGUu0",
+      "object": "chat.completion",
+      "created": 1768143491,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"celebrityA\": {\n    \"name\": \"संजू सैमसन\",\n    \"english_name\": \"Sanju Samson\",\n    \"Batting\": \"Right-hand bat\",\n    \"Matches\": \"150\",\n    \"Runs\": \"3520\",\n    \"Average\": \"30.5\",\n    \"Strike Rate\": \"134.2\"\n  },\n  \"celebrityB\": {\n    \"name\": \"सूर्यकुमार यादव\",\n    \"english_name\": \"Suryakumar Yadav\",\n    \"Batting\": \"Right-hand bat\",\n    \"Matches\": \"120\",\n    \"Runs\": \"3100\",\n    \"Average\": \"34.2\",\n    \"Strike Rate\": \"142.7\"\n  },\n  \"metric_labels\": {\n    \"Batting\": \"बैटिंग\",\n    \"Matches\": \"मैच\",\n    \"Runs\": \"रन\",\n    \"Average\": \"औसत\",\n    \"Strike Rate\": \"स्ट्राइक रेट\"\n  },\n  \"caption\": \"आज की तुलना में हम दो आधुनिक भारतीय क्रिकेट सितारों पर ध्यान केंद्रित कर रहे हैं: संजू सैमसन और सूर्यकुमार यादव। दोनों खिलाड़ी अपनी-अपनी शैली में खास हैं और भारतीय क्रिकेट टीम के लिए अहम योगदान देते हैं।\\n\\nसंजू सैमसन एक प्रतिभाशाली बल्लेबाज हैं, जो अपनी आक्रामक शैली और तेज स्ट्राइक रेट के लिए जाने जाते हैं। उन्होंने 150 मैचों में 3520 रन बनाए हैं, जिसमें उनका औसत 30.5 है। उनकी क्षमता उन्हें टीम के लिए एक महत्वपूर्ण खिलाड़ी बनाती है, खासकर जब टीम को बड़े स्कोर की आवश्यकता होती है।\\n\\nवहीं, सूर्यकुमार यादव क्रिकेट की नई सनसनी हैं। अपनी बेहतरीन बल्लेबाजी तकनीक और शांत दिमाग के साथ, वह अपने खेल को एक अलग स्तर पर ले जाते हैं। 120 मैचों में यादव ने 3100 रन बनाए हैं, जिसमें उनका औसत 34.2 है और स्ट्राइक रेट 142.7। उनकी खेल-शैली में कुछ खास बात यह है कि वह दबाव में भी बेहतरीन प्रदर्शन करते हैं।\\n\\nकुल मिलाकर, जहां संजू सैमसन अपनी आक्रामकता के लिए जाने जाते हैं, वहीं सूर्यकुमार यादव अपनी स्थिरता और तकनीकी कौशल के लिए सराहे जाते हैं। दोनों ही खिलाड़ियों ने अपने-अपने अंदाज में क्रिकेट प्रेमियों का दिल जीता है।\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Sanju Samson portrait professional HD photo\",\n  \"image_search_query_b\": \"Suryakumar Yadav portrait professional HD photo\"\n}",
+            "refusal": null,
+            "annotations": []
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1025,
+        "completion_tokens": 575,
+        "total_tokens": 1600,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "service_tier": "default",
+      "system_fingerprint": "fp_deacdd5f6f"
+    }
+  },
+  "imageUrl": null,
+  "savedImagePath": null
+}

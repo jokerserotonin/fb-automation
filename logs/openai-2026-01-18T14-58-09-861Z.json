@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-01-18T14:58:09.860Z",
+  "promptType": "celebrity_comparison",
+  "userPrompt": "Compare Dev Anand and Alia Bhatt",
+  "systemPrompt": "You are generating content for Facebook celebrity comparison posts, you will have to generate data for image and caption, caption must always be in English. and the image data must always be dependent on the language setting of the user which is determined by the language parameter.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\nCaption rules:\n- Write a HIGH-ENGAGEMENT, \"Viral Gold\" style caption (150-300 words).\n- Use a \"Pick your King/Queen\" or \"Who wins?\" angle to trigger debates.\n- Use plenty of emojis to stop the scroll 🔥👑.\n- Highlight what makes each celebrity unique and compare their achievements.\n- End with a controversial question to trigger comments (e.g., \"Tell us in the comments who you're backing!\").\n- Make it shareable and addictive for social media fans.\n- NO hashtags in caption (hashtags added separately).\n- STRICTLY USE ENGLISH for the caption.\n\n-----------------------------------------------------------\nDUAL AUDIENCE RULES (CRITICAL):\n1. THE GRAPHIC (Hindi): For non-English readers. Use Devanagari for JSON objects.\n2. THE CAPTION (English): For global engagement. Use STRICTLY ENGLISH for the \"caption\" field.\n3. NUMERALS RULE: Use Arabic numerals (0, 1, 2, 3...) for ALL numbers/stats. DO NOT use Devanagari numerals.\n-----------------------------------------------------------\n\nJSON Output Format:\n{\n  \"celebrityA\": {\n    \"name\": \"HINDI_NAME\",\n    \"englishName\": \"ENGLISH_FULL_NAME\",\n    \"age\": \"HINDI_VALUE\",\n    \"total_movies\": \"HINDI_VALUE\",\n    \"first_movie\": \"HINDI_VALUE\",\n    \"net_worth\": \"HINDI_VALUE\",\n    \"spouse\": \"HINDI_VALUE\"\n  },\n  \"celebrityB\": {\n    \"name\": \"HINDI_NAME\",\n    \"englishName\": \"ENGLISH_FULL_NAME\",\n    \"age\": \"HINDI_VALUE\",\n    \"total_movies\": \"HINDI_VALUE\",\n    \"first_movie\": \"HINDI_VALUE\",\n    \"net_worth\": \"HINDI_VALUE\",\n    \"spouse\": \"HINDI_VALUE\"\n  },\n  \"metric_labels\": {\n    \"age\": \"उम्र\",\n    \"total_movies\": \"कुल फिल्में\",\n    \"first_movie\": \"पहली फिल्म\",\n    \"best_movie\": \"बेस्ट फिल्म\",\n    \"net_worth\": \"संपत्ति\",\n    \"famous_for\": \"बेस्ट वर्क\",\n    \"best_work\": \"बेस्ट वर्क\",\n    \"spouse\": \"जीवन साथी\",\n    \"height\": \"ऊंचाई\"\n  },\n  \"caption\": \"STRICT_ENGLISH_VIRAL_CAPTION_ONLY\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Search Query in English\",\n  \"image_search_query_b\": \"Search Query in English\"\n}\n\nDo NOT use Hindi in the \"caption\" field. \nDo NOT include explanations. Return ONLY valid JSON.",
+  "metrics": [
+    "age",
+    "total_movies",
+    "first_movie",
+    "net_worth",
+    "spouse"
+  ],
+  "gptRequest": {
+    "model": "gpt-4o",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are generating content for Facebook celebrity comparison posts, you will have to generate data for image and caption, caption must always be in English. and the image data must always be dependent on the language setting of the user which is determined by the language parameter.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\nCaption rules:\n- Write a HIGH-ENGAGEMENT, \"Viral Gold\" style caption (150-300 words)..."
+      },
+      {
+        "role": "user",
+        "content": "Compare Dev Anand and Alia Bhatt"
+      }
+    ],
+    "max_tokens": 800,
+    "temperature": 0.8
+  },
+  "gptResponse": {
+    "content": "{\n  \"celebrityA\": {\n    \"name\": \"देव आनंद\",\n    \"englishName\": \"Dev Anand\",\n    \"age\": \"८८\",\n    \"total_movies\": \"११४\",\n    \"first_movie\": \"हम एक हैं\",\n    \"net_worth\": \"$५० मिलियन\",\n    \"spouse\": \"कल्पना कार्तिक\"\n  },\n  \"celebrityB\": {\n    \"name\": \"आलिया भट्ट\",\n    \"englishName\": \"Alia Bhatt\",\n    \"age\": \"३०\",\n    \"total_movies\": \"२५\",\n    \"first_movie\": \"स्टूडेंट ऑफ द ईयर\",\n    \"net_worth\": \"$१० मिलियन\",\n    \"spouse\": \"रणबीर कपूर\"\n  },\n  \"metric_labels\": {\n    \"age\": \"उम्र\",\n    \"total_movies\": \"कुल फिल्में\",\n    \"first_movie\": \"पहली फिल्म\",\n    \"best_movie\": \"बेस्ट फिल्म\",\n    \"net_worth\": \"संपत्ति\",\n    \"famous_for\": \"बेस्ट वर्क\",\n    \"best_work\": \"बेस्ट वर्क\",\n    \"spouse\": \"जीवन साथी\",\n    \"height\": \"ऊंचाई\"\n  },\n  \"caption\": \"🎬✨ Bollywood's Evergreen Charm vs. Modern-Day Star Power! 🌟 Who's your pick? Dev Anand, the ultimate style icon of the golden era, enchanted millions with his charisma and evergreen movies 🎥. With over 114 films to his credit, he remains a timeless legend. On the other hand, Alia Bhatt, the millennial diva, has swiftly captured hearts with her versatile roles and mesmerizing performances in just 25 films 🎭. While Dev Anand's legacy is unmatched with classics like 'Guide' and 'Jewel Thief', Alia is the face of today's Bollywood blockbuster hits like 'Raazi' and 'Gully Boy'. Both have left indelible marks on Indian cinema, but who steals the spotlight? Is it the enigmatic charm of Dev or the fierce ambition of Alia? 🤔 Comment below and let the debate begin! 🔥💬\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Dev Anand Bollywood\",\n  \"image_search_query_b\": \"Alia Bhatt Bollywood\"\n}",
+    "fullResponse": {
+      "id": "chatcmpl-CzOW2MbW34Y2TaTeP3Y4W4bmF9760",
+      "object": "chat.completion",
+      "created": 1768748282,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"celebrityA\": {\n    \"name\": \"देव आनंद\",\n    \"englishName\": \"Dev Anand\",\n    \"age\": \"८८\",\n    \"total_movies\": \"११४\",\n    \"first_movie\": \"हम एक हैं\",\n    \"net_worth\": \"$५० मिलियन\",\n    \"spouse\": \"कल्पना कार्तिक\"\n  },\n  \"celebrityB\": {\n    \"name\": \"आलिया भट्ट\",\n    \"englishName\": \"Alia Bhatt\",\n    \"age\": \"३०\",\n    \"total_movies\": \"२५\",\n    \"first_movie\": \"स्टूडेंट ऑफ द ईयर\",\n    \"net_worth\": \"$१० मिलियन\",\n    \"spouse\": \"रणबीर कपूर\"\n  },\n  \"metric_labels\": {\n    \"age\": \"उम्र\",\n    \"total_movies\": \"कुल फिल्में\",\n    \"first_movie\": \"पहली फिल्म\",\n    \"best_movie\": \"बेस्ट फिल्म\",\n    \"net_worth\": \"संपत्ति\",\n    \"famous_for\": \"बेस्ट वर्क\",\n    \"best_work\": \"बेस्ट वर्क\",\n    \"spouse\": \"जीवन साथी\",\n    \"height\": \"ऊंचाई\"\n  },\n  \"caption\": \"🎬✨ Bollywood's Evergreen Charm vs. Modern-Day Star Power! 🌟 Who's your pick? Dev Anand, the ultimate style icon of the golden era, enchanted millions with his charisma and evergreen movies 🎥. With over 114 films to his credit, he remains a timeless legend. On the other hand, Alia Bhatt, the millennial diva, has swiftly captured hearts with her versatile roles and mesmerizing performances in just 25 films 🎭. While Dev Anand's legacy is unmatched with classics like 'Guide' and 'Jewel Thief', Alia is the face of today's Bollywood blockbuster hits like 'Raazi' and 'Gully Boy'. Both have left indelible marks on Indian cinema, but who steals the spotlight? Is it the enigmatic charm of Dev or the fierce ambition of Alia? 🤔 Comment below and let the debate begin! 🔥💬\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Dev Anand Bollywood\",\n  \"image_search_query_b\": \"Alia Bhatt Bollywood\"\n}",
+            "refusal": null,
+            "annotations": []
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 677,
+        "completion_tokens": 490,
+        "total_tokens": 1167,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "service_tier": "default",
+      "system_fingerprint": "fp_deacdd5f6f"
+    }
+  },
+  "imageUrl": null,
+  "savedImagePath": null
+}

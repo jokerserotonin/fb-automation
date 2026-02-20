@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-01-06T16:29:19.824Z",
+  "promptType": "celebrity_comparison",
+  "userPrompt": "Compare two cricketing legends from all across the world, active and inactive player both, pick the two which are worth comparing to each other ",
+  "systemPrompt": "You are generating content for Facebook celebrity comparison posts.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\nIMPORTANT - AVOID REPEATS:\nThe following celebrity pairs have been used recently. DO NOT use these exact same pairs:\n- rahul dravid vs kane williamson\n- sunil gavaskar vs kane williamson\n- sir don bradman vs kane williamson\n- brian lara vs joe root\n- sachin tendulkar vs ben stokes\n- ab de villiers vs rohit sharma\n- sir vivian richards vs babar azam\n- ricky ponting vs joe root\n- jacques kallis vs steve smith\n- brian lara vs kane williamson\n\nYou MUST choose DIFFERENT celebrities. If the user prompt is vague (e.g., \"Bollywood celebs\"), pick different celebrities than those listed above.\n\nYou MUST return data for the following metrics (in this exact order):\n1. Age\n2. Height\n3. Centuries\n4. Runs\n5. Catches\n\nRules for values:\n- Use appropriate format for each metric (e.g., age: \"52 years\", height: \"5'9\\\"\", net_worth: \"$300M\")\n- Keep values concise and readable\n- Use \"Not Married\" or \"N/A\" for missing spouse information\n\nCaption rules:\n- Write an engaging, detailed comparison (150-300 words)\n- Highlight what makes each celebrity unique\n- Compare their acting styles, achievements, or characteristics\n- End with a thoughtful conclusion or verdict\n- Make it shareable and engaging for social media\n- NO hashtags in caption (hashtags added separately)\n- IMPORTANT: Write the entire caption in Hindi (Devanagari script). Use natural, conversational Hindi.\n\nImage rules:\n- DO NOT generate images using AI\n- DO NOT provide Wikipedia URLs (they often return 404 errors)\n- DO NOT provide Google search URLs (e.g., google.com/search?q=...)\n- Instead, provide WORKING, VERIFIED image URLs from reliable sources:\n  * Use image hosting sites like: imgur.com, i.imgur.com, cdn.*, static.*\n  * Use sports/news sites that host images directly (e.g., cricbuzz.com, espncricinfo.com)\n  * URLs must end with image extensions: .jpg, .jpeg, .png, .gif, .webp\n  * URLs must be DIRECT links to images (not pages containing images)\n- If you cannot find working image URLs, leave image_url_a and image_url_b EMPTY and provide search queries instead\n- CRITICAL: Both images must be CONSISTENT in style and framing:\n  * Both should be the same type: either BOTH headshots/portraits OR BOTH full-body OR BOTH action shots\n  * Both should be in similar settings (e.g., both on cricket field, both in studio, both in formal attire)\n  * Both should have similar lighting and background style\n  * This ensures a professional, balanced comparison image\n- When creating search queries, specify the image type clearly:\n  * Example: \"Sachin Tendulkar headshot portrait cricket field\" (not just \"Sachin Tendulkar image\")\n  * Example: \"Virat Kohli headshot portrait cricket field\" (same style for consistency)\n  * Use terms like: \"headshot\", \"portrait\", \"professional photo\", \"cricket field\", \"studio photo\", etc.\n- Images should be professional portraits, side-by-side compatible\n- Portrait orientation, clean backgrounds preferred\n- High quality, professional photos\n- ALWAYS provide search queries as backup (image_search_query_a and image_search_query_b)\n\nSTRICT OUTPUT FORMAT (VALID JSON ONLY):\n\n{\n  \"celebrityA\": {\n    \"name\": \"\",\n    \"age\": \"\",\n    \"height\": \"\",\n    \"centuries\": \"\",\n    \"runs\": \"\",\n    \"catches\": \"\"\n  },\n  \"celebrityB\": {\n    \"name\": \"\",\n    \"age\": \"\",\n    \"height\": \"\",\n    \"centuries\": \"\",\n    \"runs\": \"\",\n    \"catches\": \"\"\n  },\n  \"caption\": \"\",\n  \"image_url_a\": \"WORKING direct image URL (must end with .jpg/.png/.jpeg/.webp) OR empty string if not available\",\n  \"image_url_b\": \"WORKING direct image URL (must end with .jpg/.png/.jpeg/.webp) OR empty string if not available\",\n  \"image_search_query_a\": \"Search query for celebrity A (e.g., 'Virat Kohli portrait professional photo') - REQUIRED\",\n  \"image_search_query_b\": \"Search query for celebrity B (e.g., 'MS Dhoni portrait professional photo') - REQUIRED\"\n}\n\nDo NOT include explanations, markdown, or extra text.\nReturn ONLY valid JSON.",
+  "metrics": [
+    "age",
+    "height",
+    "centuries",
+    "runs",
+    "catches"
+  ],
+  "gptRequest": {
+    "model": "gpt-4o",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are generating content for Facebook celebrity comparison posts.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\nIMPORTANT - AVOID REPEATS:\nThe following celebrity pairs have been used recently. DO NOT use these exact same pairs:\n- rahul dravid vs kane williamson\n- sunil gavaskar vs kane williamson\n- sir don bradman vs kane williamson\n- brian lara vs joe root\n- sachin tendulkar vs ben stokes\n- ab de villiers v..."
+      },
+      {
+        "role": "user",
+        "content": "Compare two cricketing legends from all across the world, active and inactive player both, pick the two which are worth comparing to each other "
+      }
+    ],
+    "max_tokens": 800,
+    "temperature": 0.8
+  },
+  "gptResponse": {
+    "content": "{\n  \"celebrityA\": {\n    \"name\": \"Virat Kohli\",\n    \"age\": \"34 years\",\n    \"height\": \"5'9\\\"\",\n    \"centuries\": \"76\",\n    \"runs\": \"25500\",\n    \"catches\": \"250\"\n  },\n  \"celebrityB\": {\n    \"name\": \"Jacques Kallis\",\n    \"age\": \"48 years\",\n    \"height\": \"6'1\\\"\",\n    \"centuries\": \"62\",\n    \"runs\": \"25534\",\n    \"catches\": \"338\"\n  },\n  \"caption\": \"क्रिकेट जगत के दो दिग्गजों की तुलना करें तो विराट कोहली और जैक्स कैलिस का नाम सबसे पहले आता है। विराट कोहली, भारतीय क्रिकेट टीम के स्टार बल्लेबाज और पूर्व कप्तान, अपनी आक्रामक बल्लेबाजी के लिए जाने जाते हैं। उन्होंने 34 साल की उम्र में ही 76 शतक बना लिए हैं। दूसरी ओर, दक्षिण अफ्रीका के जैक्स कैलिस को क्रिकेट इतिहास के सबसे बेहतरीन ऑलराउंडर माना जाता है। \\n\\nविराट कोहली ने 25,500 रन बनाकर अपनी कड़ी मेहनत और दृढ़ संकल्प का परिचय दिया है। उनका मैदान पर जोश और नेतृत्व की क्षमता अद्वितीय है। वहीं, जैक्स कैलिस के पास 25,534 रन और 62 शतक हैं, जो उनके शानदार करियर का प्रमाण है। उन्होंने अपनी टीम के लिए गेंदबाजी में भी शानदार प्रदर्शन किया है।\\n\\nहालांकि, दोनों खिलाड़ियों ने अलग-अलग दौर में क्रिकेट खेला है, लेकिन दोनों की उपलब्धियाँ उन्हें विश्व क्रिकेट के महान सितारों में शामिल करती हैं। विराट कोहली का उत्साह और कैलिस की बहुमुखी प्रतिभा उन्हें अद्वितीय बनाती है। यह तुलना बताती है कि क्रिकेट में ऐसा कोई नहीं है जिसे हम 'सबसे अच्छा' कह सकें, क्योंकि हर खिलाड़ी का योगदान खास है।\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Virat Kohli headshot portrait cricket field\",\n  \"image_search_query_b\": \"Jacques Kallis headshot portrait cricket field\"\n}",
+    "fullResponse": {
+      "id": "chatcmpl-Cv4Dfe2RB9ocgJfUZGfqeRDnV7q61",
+      "object": "chat.completion",
+      "created": 1767716951,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"celebrityA\": {\n    \"name\": \"Virat Kohli\",\n    \"age\": \"34 years\",\n    \"height\": \"5'9\\\"\",\n    \"centuries\": \"76\",\n    \"runs\": \"25500\",\n    \"catches\": \"250\"\n  },\n  \"celebrityB\": {\n    \"name\": \"Jacques Kallis\",\n    \"age\": \"48 years\",\n    \"height\": \"6'1\\\"\",\n    \"centuries\": \"62\",\n    \"runs\": \"25534\",\n    \"catches\": \"338\"\n  },\n  \"caption\": \"क्रिकेट जगत के दो दिग्गजों की तुलना करें तो विराट कोहली और जैक्स कैलिस का नाम सबसे पहले आता है। विराट कोहली, भारतीय क्रिकेट टीम के स्टार बल्लेबाज और पूर्व कप्तान, अपनी आक्रामक बल्लेबाजी के लिए जाने जाते हैं। उन्होंने 34 साल की उम्र में ही 76 शतक बना लिए हैं। दूसरी ओर, दक्षिण अफ्रीका के जैक्स कैलिस को क्रिकेट इतिहास के सबसे बेहतरीन ऑलराउंडर माना जाता है। \\n\\nविराट कोहली ने 25,500 रन बनाकर अपनी कड़ी मेहनत और दृढ़ संकल्प का परिचय दिया है। उनका मैदान पर जोश और नेतृत्व की क्षमता अद्वितीय है। वहीं, जैक्स कैलिस के पास 25,534 रन और 62 शतक हैं, जो उनके शानदार करियर का प्रमाण है। उन्होंने अपनी टीम के लिए गेंदबाजी में भी शानदार प्रदर्शन किया है।\\n\\nहालांकि, दोनों खिलाड़ियों ने अलग-अलग दौर में क्रिकेट खेला है, लेकिन दोनों की उपलब्धियाँ उन्हें विश्व क्रिकेट के महान सितारों में शामिल करती हैं। विराट कोहली का उत्साह और कैलिस की बहुमुखी प्रतिभा उन्हें अद्वितीय बनाती है। यह तुलना बताती है कि क्रिकेट में ऐसा कोई नहीं है जिसे हम 'सबसे अच्छा' कह सकें, क्योंकि हर खिलाड़ी का योगदान खास है।\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Virat Kohli headshot portrait cricket field\",\n  \"image_search_query_b\": \"Jacques Kallis headshot portrait cricket field\"\n}",
+            "refusal": null,
+            "annotations": []
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1039,
+        "completion_tokens": 473,
+        "total_tokens": 1512,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "service_tier": "default",
+      "system_fingerprint": "fp_deacdd5f6f"
+    }
+  },
+  "imageUrl": null,
+  "savedImagePath": null
+}

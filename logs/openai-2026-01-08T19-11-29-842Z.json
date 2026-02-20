@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-01-08T19:11:29.841Z",
+  "promptType": "celebrity_comparison",
+  "userPrompt": "Compare two cricketing legends from all across the world, active and inactive player both, pick the two which are worth comparing to each other ",
+  "systemPrompt": "You are generating content for Facebook celebrity comparison posts.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\nIMPORTANT - AVOID REPEATS:\nThe following celebrity pairs have been used recently. DO NOT use these exact same pairs:\n- जैक कैलिस vs बाबर आज़म\n- ब्रायन लारा vs विराट कोहली\n- ब्रायन लारा vs डेविड वॉर्नर\n- स्टीव वॉ vs जो रूट\n- कपिल देव vs ग्लेन मैकग्रा\n- महेंद्र सिंह धोनी vs पैट कमिंस\n- राहुल द्रविड़ vs जो रूट\n- सौरव गांगुली vs केन विलियमसन\n- विराट कोहली vs रिचर्ड हेडली\n\nYou MUST choose DIFFERENT celebrities. If the user prompt is vague (e.g., \"Bollywood celebs\"), pick different celebrities than those listed above.\n\nYou MUST return data for the following metrics (in this exact order):\n1. Runs\n2. Centuries\n3. Wickets\n4. Fifties\n5. World cups\n\nRules for values:\n- Use appropriate format for each metric (e.g., age: \"52 years\", height: \"5'9\\\"\", net_worth: \"$300M\")\n- Keep values concise and readable\n- Use \"Not Married\" or \"N/A\" for missing spouse information\n\nCaption rules:\n- Write an engaging, detailed comparison (150-300 words)\n- Highlight what makes each celebrity unique\n- Compare their acting styles, achievements, or characteristics\n- End with a thoughtful conclusion or verdict\n- Make it shareable and engaging for social media\n- NO hashtags in caption (hashtags added separately)\n\nImage rules:\n- DO NOT generate images using AI\n- DO NOT provide Wikipedia URLs (they often return 404 errors)\n- DO NOT provide Google search URLs (e.g., google.com/search?q=...)\n- Instead, provide WORKING, VERIFIED image URLs from reliable sources:\n  * Use image hosting sites like: imgur.com, i.imgur.com, cdn.*, static.*\n  * Use sports/news sites that host images directly (e.g., cricbuzz.com, espncricinfo.com)\n  * URLs must end with image extensions: .jpg, .jpeg, .png, .gif, .webp\n  * URLs must be DIRECT links to images (not pages containing images)\n- If you cannot find working image URLs, leave image_url_a and image_url_b EMPTY and provide search queries instead\n- CRITICAL: Both images must be CONSISTENT in style and framing:\n  * Both should be the same type: either BOTH headshots/portraits OR BOTH full-body OR BOTH action shots\n  * Both should be in similar settings (e.g., both on cricket field, both in studio, both in formal attire)\n  * Both should have similar lighting and background style\n  * This ensures a professional, balanced comparison image\n- When creating search queries, specify the image type clearly:\n  * Example: \"Sachin Tendulkar headshot portrait cricket field\" (not just \"Sachin Tendulkar image\")\n  * Example: \"Virat Kohli headshot portrait cricket field\" (same style for consistency)\n  * Use terms like: \"headshot\", \"portrait\", \"professional photo\", \"cricket field\", \"studio photo\", etc.\n- Images should be professional portraits, side-by-side compatible\n- Portrait orientation, clean backgrounds preferred\n- High quality, professional photos\n- ALWAYS provide search queries as backup (image_search_query_a and image_search_query_b)\n\nSTRICT OUTPUT FORMAT (VALID JSON ONLY):\n\n{\n  \"celebrityA\": {\n    \"name\": \"Name in target language\",\n    \"english_name\": \"Name STRICTLY in English/Latin script. DO NOT use Devanagari here.\",\n    \"runs\": \"\",\n    \"centuries\": \"\",\n    \"wickets\": \"\",\n    \"fifties\": \"\",\n    \"world cups\": \"\"\n  },\n  \"celebrityB\": {\n    \"name\": \"Name in target language\",\n    \"english_name\": \"Name STRICTLY in English/Latin script. DO NOT use Devanagari here.\",\n    \"runs\": \"\",\n    \"centuries\": \"\",\n    \"wickets\": \"\",\n    \"fifties\": \"\",\n    \"world cups\": \"\"\n  },\n  \"metric_labels\": {\n    // Map each metric key to its display label in target language\n    // Example: \"age\": \"Age\" (or \"उम्र\" if Hindi)\n    // Example: \"net_worth\": \"Net Worth\" (or \"संपत्ति\" if Hindi)\n    // Include ALL metrics requested\n  },\n  \"caption\": \"\",\n  \"image_url_a\": \"WORKING direct image URL (must end with .jpg/.png/.jpeg/.webp) OR empty string if not available\",\n  \"image_url_b\": \"WORKING direct image URL (must end with .jpg/.png/.jpeg/.webp) OR empty string if not available\",\n  \"image_search_query_a\": \"Search query for celebrity A (MUST BE IN ENGLISH, e.g., 'Virat Kohli portrait professional HD photo') - REQUIRED\",\n  \"image_search_query_b\": \"Search query for celebrity B (MUST BE IN ENGLISH, e.g., 'MS Dhoni portrait professional HD photo') - REQUIRED\"\n}\n\nCRITICAL: 'image_search_query' MUST ALWAYS BE IN ENGLISH, even if the caption is in Hindi. Do not use Hindi names for search queries.\n\nDo NOT include explanations, markdown, or extra text.\nReturn ONLY valid JSON.",
+  "metrics": [
+    "runs",
+    "centuries",
+    "wickets",
+    "fifties",
+    "world cups"
+  ],
+  "gptRequest": {
+    "model": "gpt-4o",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are generating content for Facebook celebrity comparison posts.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\nIMPORTANT - AVOID REPEATS:\nThe following celebrity pairs have been used recently. DO NOT use these exact same pairs:\n- जैक कैलिस vs बाबर आज़म\n- ब्रायन लारा vs विराट कोहली\n- ब्रायन लारा vs डेविड वॉर्नर\n- स्टीव वॉ vs जो रूट\n- कपिल देव vs ग्लेन मैकग्रा\n- महेंद्र सिंह धोनी vs पैट कमिंस\n- राहुल द्रविड़ v..."
+      },
+      {
+        "role": "user",
+        "content": "Compare two cricketing legends from all across the world, active and inactive player both, pick the two which are worth comparing to each other "
+      }
+    ],
+    "max_tokens": 800,
+    "temperature": 0.8
+  },
+  "gptResponse": {
+    "content": "{\n  \"celebrityA\": {\n    \"name\": \"सचिन तेंदुलकर\",\n    \"english_name\": \"Sachin Tendulkar\",\n    \"runs\": \"34,357\",\n    \"centuries\": \"100\",\n    \"wickets\": \"200\",\n    \"fifties\": \"164\",\n    \"world cups\": \"1\"\n  },\n  \"celebrityB\": {\n    \"name\": \"जो रूट\",\n    \"english_name\": \"Joe Root\",\n    \"runs\": \"18,000\",\n    \"centuries\": \"44\",\n    \"wickets\": \"30\",\n    \"fifties\": \"95\",\n    \"world cups\": \"1\"\n  },\n  \"metric_labels\": {\n    \"runs\": \"रन\",\n    \"centuries\": \"शतक\",\n    \"wickets\": \"विकेट\",\n    \"fifties\": \"अर्धशतक\",\n    \"world cups\": \"विश्व कप\"\n  },\n  \"caption\": \"क्रिकेट की दुनिया में अपने अद्वितीय प्रदर्शन के लिए प्रसिद्ध, सचिन तेंदुलकर और जो रूट दो ऐसे नाम हैं जिन्हें हर क्रिकेट प्रेमी जानता है। सचिन तेंदुलकर, जिन्हें क्रिकेट का भगवान कहा जाता है, ने अपने करियर में 34,357 रन बनाए और 100 शतक लगाए हैं। उनका योगदान न केवल उनके रन में बल्कि उनके 200 विकेट्स के रूप में भी देखा जा सकता है। दूसरी ओर, जो रूट, जो वर्तमान में एक सक्रिय खिलाड़ी हैं, ने 18,000 रन और 44 शतक बनाए हैं। जो रूट ने भी 30 विकेट हासिल किए हैं और इंग्लैंड को एक विश्व कप जीत दिलाई है। दोनों खिलाड़ियों की कम्पैरिजन में, जहां सचिन का अनुभव और अचीवमेंट्स अभूतपूर्व हैं, वहीं जो रूट की वर्तमान फॉर्म और नेतृत्व भी विशेष ध्यान देने योग्य है। क्रिकेट प्रेमियों के लिए यह एक अद्भुत तुलना है जो खेल की कला और खिलाड़ियों की प्रतिभा को दर्शाती है।\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Sachin Tendulkar portrait professional HD photo\",\n  \"image_search_query_b\": \"Joe Root portrait professional HD photo\"\n}",
+    "fullResponse": {
+      "id": "chatcmpl-Cvphh8ZjoO5p3CPHY8Iz2btfiPrga",
+      "object": "chat.completion",
+      "created": 1767899481,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"celebrityA\": {\n    \"name\": \"सचिन तेंदुलकर\",\n    \"english_name\": \"Sachin Tendulkar\",\n    \"runs\": \"34,357\",\n    \"centuries\": \"100\",\n    \"wickets\": \"200\",\n    \"fifties\": \"164\",\n    \"world cups\": \"1\"\n  },\n  \"celebrityB\": {\n    \"name\": \"जो रूट\",\n    \"english_name\": \"Joe Root\",\n    \"runs\": \"18,000\",\n    \"centuries\": \"44\",\n    \"wickets\": \"30\",\n    \"fifties\": \"95\",\n    \"world cups\": \"1\"\n  },\n  \"metric_labels\": {\n    \"runs\": \"रन\",\n    \"centuries\": \"शतक\",\n    \"wickets\": \"विकेट\",\n    \"fifties\": \"अर्धशतक\",\n    \"world cups\": \"विश्व कप\"\n  },\n  \"caption\": \"क्रिकेट की दुनिया में अपने अद्वितीय प्रदर्शन के लिए प्रसिद्ध, सचिन तेंदुलकर और जो रूट दो ऐसे नाम हैं जिन्हें हर क्रिकेट प्रेमी जानता है। सचिन तेंदुलकर, जिन्हें क्रिकेट का भगवान कहा जाता है, ने अपने करियर में 34,357 रन बनाए और 100 शतक लगाए हैं। उनका योगदान न केवल उनके रन में बल्कि उनके 200 विकेट्स के रूप में भी देखा जा सकता है। दूसरी ओर, जो रूट, जो वर्तमान में एक सक्रिय खिलाड़ी हैं, ने 18,000 रन और 44 शतक बनाए हैं। जो रूट ने भी 30 विकेट हासिल किए हैं और इंग्लैंड को एक विश्व कप जीत दिलाई है। दोनों खिलाड़ियों की कम्पैरिजन में, जहां सचिन का अनुभव और अचीवमेंट्स अभूतपूर्व हैं, वहीं जो रूट की वर्तमान फॉर्म और नेतृत्व भी विशेष ध्यान देने योग्य है। क्रिकेट प्रेमियों के लिए यह एक अद्भुत तुलना है जो खेल की कला और खिलाड़ियों की प्रतिभा को दर्शाती है।\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Sachin Tendulkar portrait professional HD photo\",\n  \"image_search_query_b\": \"Joe Root portrait professional HD photo\"\n}",
+            "refusal": null,
+            "annotations": []
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1217,
+        "completion_tokens": 471,
+        "total_tokens": 1688,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "service_tier": "default",
+      "system_fingerprint": "fp_deacdd5f6f"
+    }
+  },
+  "imageUrl": null,
+  "savedImagePath": null
+}

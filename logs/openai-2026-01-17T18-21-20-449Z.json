@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-01-17T18:21:20.448Z",
+  "promptType": "celebrity_comparison",
+  "userPrompt": "Compare Dev Anand and Alia Bhatt",
+  "systemPrompt": "You are generating content for Facebook celebrity comparison posts, you will have to generate data for image and caption, caption must always be in English. and the image data must always be dependent on the language setting of the user which is determined by the language parameter.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\n-----------------------------------------------------------\nDUAL AUDIENCE RULES (CRITICAL):\n1. THE GRAPHIC (Hindi): For non-English readers. Use Devanagari for JSON objects.\n2. THE CAPTION (English): For global engagement. Use STRICTLY ENGLISH for the \"caption\" field.\n-----------------------------------------------------------\n\nJSON Output Format:\n{\n  \"celebrityA\": {\n    \"name\": \"HINDI_NAME\",\n    \"englishName\": \"ENGLISH_FULL_NAME\",\n    \"age\": \"HINDI_VALUE\",\n    \"total_movies\": \"HINDI_VALUE\",\n    \"first_movie\": \"HINDI_VALUE\",\n    \"net_worth\": \"HINDI_VALUE\",\n    \"spouse\": \"HINDI_VALUE\"\n  },\n  \"celebrityB\": {\n    \"name\": \"HINDI_NAME\",\n    \"englishName\": \"ENGLISH_FULL_NAME\",\n    \"age\": \"HINDI_VALUE\",\n    \"total_movies\": \"HINDI_VALUE\",\n    \"first_movie\": \"HINDI_VALUE\",\n    \"net_worth\": \"HINDI_VALUE\",\n    \"spouse\": \"HINDI_VALUE\"\n  },\n  \"metric_labels\": {\n    \"age\": \"उम्र\",\n    \"total_movies\": \"कुल फिल्में\",\n    \"first_movie\": \"पहली फिल्म\",\n    \"best_movie\": \"बेस्ट फिल्म\",\n    \"net_worth\": \"संपत्ति\",\n    \"famous_for\": \"बेस्ट वर्क\",\n    \"best_work\": \"बेस्ट वर्क\",\n    \"spouse\": \"जीवन साथी\",\n    \"height\": \"ऊंचाई\"\n  },\n  \"caption\": \"STRICT_ENGLISH_VIRAL_CAPTION_ONLY\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Search Query in English\",\n  \"image_search_query_b\": \"Search Query in English\"\n}\n\nDo NOT use Hindi in the \"caption\" field. \nDo NOT include explanations. Return ONLY valid JSON.",
+  "metrics": [
+    "age",
+    "total_movies",
+    "first_movie",
+    "net_worth",
+    "spouse"
+  ],
+  "gptRequest": {
+    "model": "gpt-4o",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are generating content for Facebook celebrity comparison posts, you will have to generate data for image and caption, caption must always be in English. and the image data must always be dependent on the language setting of the user which is determined by the language parameter.\n\nCelebrities:\n- Compare TWO popular celebrities based on the user's prompt.\n- Stats can be approximate and for entertainment only.\n\n-----------------------------------------------------------\nDUAL AUDIENCE RULES (CRI..."
+      },
+      {
+        "role": "user",
+        "content": "Compare Dev Anand and Alia Bhatt"
+      }
+    ],
+    "max_tokens": 800,
+    "temperature": 0.8
+  },
+  "gptResponse": {
+    "content": "{\n  \"celebrityA\": {\n    \"name\": \"देव आनंद\",\n    \"englishName\": \"Dev Anand\",\n    \"age\": \"८८\",\n    \"total_movies\": \"११४\",\n    \"first_movie\": \"हम एक हैं (१९४६)\",\n    \"net_worth\": \"२० मिलियन USD\",\n    \"spouse\": \"कल्पना कार्तिक\"\n  },\n  \"celebrityB\": {\n    \"name\": \"आलिया भट्ट\",\n    \"englishName\": \"Alia Bhatt\",\n    \"age\": \"३०\",\n    \"total_movies\": \"२६\",\n    \"first_movie\": \"स्टूडेंट ऑफ़ द ईयर (२०१२)\",\n    \"net_worth\": \"१० मिलियन USD\",\n    \"spouse\": \"रणबीर कपूर\"\n  },\n  \"metric_labels\": {\n    \"age\": \"उम्र\",\n    \"total_movies\": \"कुल फिल्में\",\n    \"first_movie\": \"पहली फिल्म\",\n    \"best_movie\": \"बेस्ट फिल्म\",\n    \"net_worth\": \"संपत्ति\",\n    \"famous_for\": \"बेस्ट वर्क\",\n    \"best_work\": \"बेस्ट वर्क\",\n    \"spouse\": \"जीवन साथी\",\n    \"height\": \"ऊंचाई\"\n  },\n  \"caption\": \"From timeless classics to modern masterpieces, Dev Anand and Alia Bhatt have defined Bollywood's golden eras. Who's your favorite?\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Dev Anand Bollywood Actor\",\n  \"image_search_query_b\": \"Alia Bhatt Bollywood Actress\"\n}",
+    "fullResponse": {
+      "id": "chatcmpl-Cz5DA73312iJSS3vOI4udyjuX61yF",
+      "object": "chat.completion",
+      "created": 1768674076,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"celebrityA\": {\n    \"name\": \"देव आनंद\",\n    \"englishName\": \"Dev Anand\",\n    \"age\": \"८८\",\n    \"total_movies\": \"११४\",\n    \"first_movie\": \"हम एक हैं (१९४६)\",\n    \"net_worth\": \"२० मिलियन USD\",\n    \"spouse\": \"कल्पना कार्तिक\"\n  },\n  \"celebrityB\": {\n    \"name\": \"आलिया भट्ट\",\n    \"englishName\": \"Alia Bhatt\",\n    \"age\": \"३०\",\n    \"total_movies\": \"२६\",\n    \"first_movie\": \"स्टूडेंट ऑफ़ द ईयर (२०१२)\",\n    \"net_worth\": \"१० मिलियन USD\",\n    \"spouse\": \"रणबीर कपूर\"\n  },\n  \"metric_labels\": {\n    \"age\": \"उम्र\",\n    \"total_movies\": \"कुल फिल्में\",\n    \"first_movie\": \"पहली फिल्म\",\n    \"best_movie\": \"बेस्ट फिल्म\",\n    \"net_worth\": \"संपत्ति\",\n    \"famous_for\": \"बेस्ट वर्क\",\n    \"best_work\": \"बेस्ट वर्क\",\n    \"spouse\": \"जीवन साथी\",\n    \"height\": \"ऊंचाई\"\n  },\n  \"caption\": \"From timeless classics to modern masterpieces, Dev Anand and Alia Bhatt have defined Bollywood's golden eras. Who's your favorite?\",\n  \"image_url_a\": \"\",\n  \"image_url_b\": \"\",\n  \"image_search_query_a\": \"Dev Anand Bollywood Actor\",\n  \"image_search_query_b\": \"Alia Bhatt Bollywood Actress\"\n}",
+            "refusal": null,
+            "annotations": []
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 512,
+        "completion_tokens": 348,
+        "total_tokens": 860,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "service_tier": "default",
+      "system_fingerprint": "fp_deacdd5f6f"
+    }
+  },
+  "imageUrl": null,
+  "savedImagePath": null
+}
